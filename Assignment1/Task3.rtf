@@ -1,0 +1,32 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf250
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww21180\viewh12960\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 Task 3\
+\
+1)\
+	A.  The Distributor has no more tickets to issue.\
+	B.  The Passenger inserts money from a different country.\
+	C.  The Passenger cancels the transaction after step 1\
+\
+2)\
+Use case name	PurchaseTicket\
+\
+Entry condition	The Passenger is standing in front of the ticket distributor.\
+			The Passenger has sufficient money to purchase a ticket.\
+			The Distributor has a ticket to issue.\
+\
+Flow of events	1.  Passenger selects a number of zones to be traveled.   If the Passenger presses multiple buttons, only the last button pressed is considered by the Distributor.\
+			2.  The Distributor displays the amount due.\
+			3.  The Passenger inserts money.\
+			4.  If the Passenger inserts unrecognized currency, the Distributor returns it.\
+			5.  If the Passenger selects a new zone before inserting sufficient money, the Distributor returns all coins and bills already inserted.\
+			6.  If the Passenger inserted more money than the amount due, the Distributor returns excess change.\
+			7.  The Distributor issues the ticket.\
+			8.  The Passenger picks up the change and the ticket.\
+\
+Exit condition	The Passenger has picked up the selected ticket\
+\
+Alternative path	At any time before the ticket is issued the Passenger may cancel the ticket order.  All money is returned, and the Distributor returns to step 1.}
