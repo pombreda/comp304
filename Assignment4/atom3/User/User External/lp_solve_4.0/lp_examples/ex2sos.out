@@ -1,0 +1,13 @@
+
+Value of objective function: -30
+
+Actual values of the variables:
+x1                   0
+x2                   10.5
+x3                   3
+x4                   0
+
+Actual values of the constraints:
+c1                   13.5
+c2                   -28.5
+c3                   0

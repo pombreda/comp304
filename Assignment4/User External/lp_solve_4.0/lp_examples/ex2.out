@@ -1,0 +1,10 @@
+
+Value of objective function: 119.625
+
+Actual values of the variables:
+x1                   9.5625
+x2                   2.875
+
+Actual values of the constraints:
+c1                   156
+c2                   22

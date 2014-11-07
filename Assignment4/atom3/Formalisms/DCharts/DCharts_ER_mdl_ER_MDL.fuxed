@@ -1,0 +1,1395 @@
+"""
+__DCharts_ER_mdl_ER_MDL.py_____________________________________________________
+
+Automatically generated AToM3 Model File (Do not modify directly)
+Author: Denis Dube
+Modified: Thu Jul 07 14:40:48 2005
+_______________________________________________________________________________
+"""
+from stickylink import *
+from widthXfillXdecoration import *
+from Class3 import *
+from Association3 import *
+from ERentity import *
+from ERrelationship import *
+from graph_Association3 import *
+from graph_Class3 import *
+from graph_ERrelationship import *
+from graph_ERentity import *
+from ATOM3Enum import *
+from ATOM3String import *
+from ATOM3BottomType import *
+from ATOM3Constraint import *
+from ATOM3Attribute import *
+from ATOM3Float import *
+from ATOM3List import *
+from ATOM3Link import *
+from ATOM3Connection import *
+from ATOM3Boolean import *
+from ATOM3Appearance import *
+from ATOM3Text import *
+from ATOM3Action import *
+from ATOM3Integer import *
+from ATOM3Port import *
+from ATOM3MSEnum import *
+
+def DCharts_ER_mdl_ER_MDL(self, rootNode, ClassDiagramsV3RootNode=None, EntityRelationshipRootNode=None):
+
+    # --- Generating attributes code for ASG ClassDiagramsV3 ---
+    if( ClassDiagramsV3RootNode ): 
+        # name
+        ClassDiagramsV3RootNode.name.setValue('dChartsV2')
+
+        # author
+        ClassDiagramsV3RootNode.author.setValue('Denis Dube')
+
+        # showCardinalities
+        ClassDiagramsV3RootNode.showCardinalities.setValue((None, 0))
+        ClassDiagramsV3RootNode.showCardinalities.config = 0
+
+        # showAssociationBox
+        ClassDiagramsV3RootNode.showAssociationBox.setValue((None, 1))
+        ClassDiagramsV3RootNode.showAssociationBox.config = 0
+
+        # showAttributes
+        ClassDiagramsV3RootNode.showAttributes.setValue((None, 1))
+        ClassDiagramsV3RootNode.showAttributes.config = 0
+
+        # showActions
+        ClassDiagramsV3RootNode.showActions.setValue((None, 1))
+        ClassDiagramsV3RootNode.showActions.config = 0
+
+        # showConditions
+        ClassDiagramsV3RootNode.showConditions.setValue((None, 1))
+        ClassDiagramsV3RootNode.showConditions.config = 0
+
+        # attributes
+        ClassDiagramsV3RootNode.attributes.setActionFlags([ 1, 1, 1, 0])
+        lcobj1 =[]
+        cobj1=ATOM3Attribute(self.types)
+        cobj1.setValue(('name', 'String', None, ('Key', 1), ('Direct Editing', 1)))
+        cobj1.initialValue=ATOM3String('')
+        lcobj1.append(cobj1)
+        cobj1=ATOM3Attribute(self.types)
+        cobj1.setValue(('author', 'String', None, ('Key', 0), ('Direct Editing', 1)))
+        cobj1.initialValue=ATOM3String('Annonymous')
+        lcobj1.append(cobj1)
+        cobj1=ATOM3Attribute(self.types)
+        cobj1.setValue(('description', 'Text', None, ('Key', 0), ('Direct Editing', 1)))
+        cobj1.initialValue=ATOM3Text('\n', 60,15 )
+        lcobj1.append(cobj1)
+        ClassDiagramsV3RootNode.attributes.setValue(lcobj1)
+
+        # constraints
+        ClassDiagramsV3RootNode.constraints.setActionFlags([ 1, 1, 1, 0])
+        lcobj1 =[]
+        ClassDiagramsV3RootNode.constraints.setValue(lcobj1)
+
+        # description
+        ClassDiagramsV3RootNode.description.setValue('\n')
+    # --- ASG attributes over ---
+
+
+    # --- Generating attributes code for ASG EntityRelationship ---
+    if( EntityRelationshipRootNode ): 
+        # attributes
+        EntityRelationshipRootNode.attributes.setActionFlags([ 1, 1, 1, 0])
+        lcobj1 =[]
+        EntityRelationshipRootNode.attributes.setValue(lcobj1)
+
+        # name
+        EntityRelationshipRootNode.name.setValue('DCharts')
+
+        # constraints
+        EntityRelationshipRootNode.constraints.setActionFlags([ 1, 1, 1, 0])
+        lcobj1 =[]
+        EntityRelationshipRootNode.constraints.setValue(lcobj1)
+    # --- ASG attributes over ---
+
+
+    self.obj24=Class3(self)
+    self.obj24.isGraphObjectVisual = True
+
+
+    # name
+    self.obj24.name.setValue('dCompositeV2')
+
+    # Abstract
+    self.obj24.Abstract.setValue((None, 0))
+    self.obj24.Abstract.config = 0
+
+    # Actions
+    self.obj24.Actions.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    self.obj24.Actions.setValue(lcobj2)
+
+    # Graphical_Appearance
+    self.obj24.Graphical_Appearance.setValue( ('dCompositeV2', self.obj24))
+
+    # attributes
+    self.obj24.attributes.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('name', 'String', None, ('Key', 1), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3String('Composite')
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('is_default', 'Boolean', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3Boolean()
+    cobj2.initialValue.setValue((None, 0))
+    cobj2.initialValue.config = 1
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('visible', 'Boolean', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3Boolean()
+    cobj2.initialValue.setValue((None, 1))
+    cobj2.initialValue.config = 1
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('auto_adjust', 'Boolean', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3Boolean()
+    cobj2.initialValue.setValue((None, 1))
+    cobj2.initialValue.config = 1
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('enter_action', 'Text', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3Text('', 60,15 )
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('exit_action', 'Text', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3Text('', 60,15 )
+    lcobj2.append(cobj2)
+    self.obj24.attributes.setValue(lcobj2)
+
+    # cardinality
+    self.obj24.cardinality.setActionFlags([ 0, 1, 0, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dOrthogonalityV2', (('Source', 'Destination'), 0), '0', 'N'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dContainsV2', (('Source', 'Destination'), 1), '0', 'N'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dContainsV2', (('Source', 'Destination'), 0), '0', 'N'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dHyperedgeV2', (('Source', 'Destination'), 0), '0', 'N'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dHyperedgeV2', (('Source', 'Destination'), 1), '0', 'N'))
+    lcobj2.append(cobj2)
+    self.obj24.cardinality.setValue(lcobj2)
+
+    # display
+    self.obj24.display.setValue('Attributes:\n  - name :: String\n  - is_default :: Boolean\n  - visible :: Boolean\n  - auto_adjust :: Boolean\n  - enter_action :: Text\n  - exit_action :: Text\nConstraints:\n  > Composite_CREATE\n  > Composite_DRAG\n  > Composite_MOVE\n  > Composite_DROP\n  > Composite_EDIT\n')
+
+    # Constraints
+    self.obj24.Constraints.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('Composite_CREATE', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]), 'import DCharts_utils\nDCharts_utils.Composite_CREATE(self)\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('Composite_DRAG', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0]), 'import DCharts_utils\nDCharts_utils.Composite_DRAG(self)\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('Composite_MOVE', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]), 'import DCharts_utils\nDCharts_utils.Composite_MOVE(self)\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('Composite_DROP', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]), 'import DCharts_utils\nDCharts_utils.Composite_DROP(self)\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('Composite_EDIT', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), 'import DCharts_utils\nDCharts_utils.Composite_EDIT(self)\n'))
+    lcobj2.append(cobj2)
+    self.obj24.Constraints.setValue(lcobj2)
+
+    self.obj24.graphClass_= graph_Class3
+    if self.genGraphics:
+       new_obj = graph_Class3(65.0,172.0,self.obj24)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("Class3", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.0, 2.0139344262295085]
+    else: new_obj = None
+    self.obj24.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj24)
+    self.globalAndLocalPostcondition(self.obj24, rootNode)
+
+    self.obj25=Class3(self)
+    self.obj25.isGraphObjectVisual = True
+
+
+    # name
+    self.obj25.name.setValue('dBasicV2')
+
+    # Abstract
+    self.obj25.Abstract.setValue((None, 0))
+    self.obj25.Abstract.config = 0
+
+    # Actions
+    self.obj25.Actions.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    self.obj25.Actions.setValue(lcobj2)
+
+    # Graphical_Appearance
+    self.obj25.Graphical_Appearance.setValue( ('dBasicV2', self.obj25))
+
+    # attributes
+    self.obj25.attributes.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('name', 'String', None, ('Key', 1), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3String('Basic')
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('is_default', 'Boolean', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3Boolean()
+    cobj2.initialValue.setValue((None, 0))
+    cobj2.initialValue.config = 1
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('enter_action', 'Text', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3Text('\n', 60,15 )
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('exit_action', 'Text', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3Text('\n', 60,15 )
+    lcobj2.append(cobj2)
+    self.obj25.attributes.setValue(lcobj2)
+
+    # cardinality
+    self.obj25.cardinality.setActionFlags([ 0, 1, 0, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dHyperedgeV2', (('Source', 'Destination'), 1), '0', 'N'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dContainsV2', (('Source', 'Destination'), 1), '0', 'N'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dHyperedgeV2', (('Source', 'Destination'), 0), '0', 'N'))
+    lcobj2.append(cobj2)
+    self.obj25.cardinality.setValue(lcobj2)
+
+    # display
+    self.obj25.display.setValue('Attributes:\n  - name :: String\n  - is_default :: Boolean\n  - enter_action :: Text\n  - exit_action :: Text\nConstraints:\n  > Basic_CREATE\n  > Basic_DRAG\n  > Basic_DROP\n  > Basic_MOVE\n')
+
+    # Constraints
+    self.obj25.Constraints.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('Basic_CREATE', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]), 'import DCharts_utils\nDCharts_utils.Basic_CREATE(self)\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('Basic_DRAG', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0]), 'import DCharts_utils\nDCharts_utils.Basic_DRAG(self)\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('Basic_DROP', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]), 'import DCharts_utils\nDCharts_utils.Basic_DROP(self)\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('Basic_MOVE', (['Python', 'OCL'], 1), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]), 'import DCharts_utils\nDCharts_utils.Basic_MOVE(self)\n'))
+    lcobj2.append(cobj2)
+    self.obj25.Constraints.setValue(lcobj2)
+
+    self.obj25.graphClass_= graph_Class3
+    if self.genGraphics:
+       new_obj = graph_Class3(760.0,500.0,self.obj25)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("Class3", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.0, 1.5491803278688527]
+    else: new_obj = None
+    self.obj25.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj25)
+    self.globalAndLocalPostcondition(self.obj25, rootNode)
+
+    self.obj26=Class3(self)
+    self.obj26.isGraphObjectVisual = True
+
+
+    # name
+    self.obj26.name.setValue('dOrthogonalV2')
+
+    # Abstract
+    self.obj26.Abstract.setValue((None, 0))
+    self.obj26.Abstract.config = 0
+
+    # Actions
+    self.obj26.Actions.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    self.obj26.Actions.setValue(lcobj2)
+
+    # Graphical_Appearance
+    self.obj26.Graphical_Appearance.setValue( ('dOrthogonalV2', self.obj26))
+
+    # attributes
+    self.obj26.attributes.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('name', 'String', None, ('Key', 1), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3String('Orthogonal')
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('visible', 'Boolean', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3Boolean()
+    cobj2.initialValue.setValue((None, 1))
+    cobj2.initialValue.config = 1
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('auto_adjust', 'Boolean', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3Boolean()
+    cobj2.initialValue.setValue((None, 1))
+    cobj2.initialValue.config = 1
+    lcobj2.append(cobj2)
+    self.obj26.attributes.setValue(lcobj2)
+
+    # cardinality
+    self.obj26.cardinality.setActionFlags([ 0, 1, 0, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dOrthogonalityV2', (('Source', 'Destination'), 1), '0', 'N'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dContainsV2', (('Source', 'Destination'), 0), '0', 'N'))
+    lcobj2.append(cobj2)
+    self.obj26.cardinality.setValue(lcobj2)
+
+    # display
+    self.obj26.display.setValue('Attributes:\n  - name :: String\n  - visible :: Boolean\n  - auto_adjust :: Boolean\nConstraints:\n  > Orthogonal_CREATE\n  > Orthogonal_DRAG\n  > Orthogonal_MOVE\n  > Orthogonal_DROP\n  > Orthogonal_EDIT\n')
+
+    # Constraints
+    self.obj26.Constraints.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('Orthogonal_CREATE', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]), 'import DCharts_utils\nDCharts_utils.Orthogonal_CREATE(self)\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('Orthogonal_DRAG', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0]), 'import DCharts_utils\nDCharts_utils.Orthogonal_DRAG(self)\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('Orthogonal_MOVE', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]), 'import DCharts_utils\nDCharts_utils.Orthogonal_MOVE(self)\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('Orthogonal_DROP', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]), 'import DCharts_utils\nDCharts_utils.Orthogonal_DROP(self)\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('Orthogonal_EDIT', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), 'import DCharts_utils\nDCharts_utils.Orthogonal_EDIT(self)\n'))
+    lcobj2.append(cobj2)
+    self.obj26.Constraints.setValue(lcobj2)
+
+    self.obj26.graphClass_= graph_Class3
+    if self.genGraphics:
+       new_obj = graph_Class3(42.169216,600.0,self.obj26)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("Class3", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.0, 1.5491803278688527]
+    else: new_obj = None
+    self.obj26.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj26)
+    self.globalAndLocalPostcondition(self.obj26, rootNode)
+
+    self.obj27=Class3(self)
+    self.obj27.isGraphObjectVisual = True
+
+
+    # name
+    self.obj27.name.setValue('dHistoryV2')
+
+    # Abstract
+    self.obj27.Abstract.setValue((None, 0))
+    self.obj27.Abstract.config = 0
+
+    # Actions
+    self.obj27.Actions.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    self.obj27.Actions.setValue(lcobj2)
+
+    # Graphical_Appearance
+    self.obj27.Graphical_Appearance.setValue( ('dHistoryV2', self.obj27))
+
+    # attributes
+    self.obj27.attributes.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('is_default', 'Boolean', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3Boolean()
+    cobj2.initialValue.setValue((None, 0))
+    cobj2.initialValue.config = 1
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('name', 'String', None, ('Key', 1), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3String('History')
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('star', 'Boolean', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3Boolean()
+    cobj2.initialValue.setValue((None, 0))
+    cobj2.initialValue.config = 1
+    lcobj2.append(cobj2)
+    self.obj27.attributes.setValue(lcobj2)
+
+    # cardinality
+    self.obj27.cardinality.setActionFlags([ 0, 1, 0, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dHyperedgeV2', (('Source', 'Destination'), 1), '0', 'N'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dContainsV2', (('Source', 'Destination'), 1), '0', 'N'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dHyperedgeV2', (('Source', 'Destination'), 0), '0', 'N'))
+    lcobj2.append(cobj2)
+    self.obj27.cardinality.setValue(lcobj2)
+
+    # display
+    self.obj27.display.setValue('Attributes:\n  - is_default :: Boolean\n  - name :: String\n  - star :: Boolean\nConstraints:\n  > History_CREATE\n  > History_DRAG\n  > History_DROP\n  > History_MOVE\n')
+
+    # Constraints
+    self.obj27.Constraints.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('History_CREATE', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]), 'import DCharts_utils\nDCharts_utils.History_CREATE(self)\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('History_DRAG', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0]), 'import DCharts_utils\nDCharts_utils.History_DRAG(self)\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('History_DROP', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]), 'import DCharts_utils\nDCharts_utils.History_DROP(self)\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('History_MOVE', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]), 'import DCharts_utils\nDCharts_utils.History_MOVE(self)\n'))
+    lcobj2.append(cobj2)
+    self.obj27.Constraints.setValue(lcobj2)
+
+    self.obj27.graphClass_= graph_Class3
+    if self.genGraphics:
+       new_obj = graph_Class3(520.0,500.0,self.obj27)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("Class3", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.0, 1.3942622950819674]
+    else: new_obj = None
+    self.obj27.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj27)
+    self.globalAndLocalPostcondition(self.obj27, rootNode)
+
+    self.obj28=Class3(self)
+    self.obj28.isGraphObjectVisual = True
+
+
+    # name
+    self.obj28.name.setValue('dPortV2')
+
+    # Abstract
+    self.obj28.Abstract.setValue((None, 0))
+    self.obj28.Abstract.config = 0
+
+    # Actions
+    self.obj28.Actions.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    self.obj28.Actions.setValue(lcobj2)
+
+    # Graphical_Appearance
+    self.obj28.Graphical_Appearance.setValue( ('dPortV2', self.obj28))
+
+    # attributes
+    self.obj28.attributes.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('name', 'String', None, ('Key', 1), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3String('Port')
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('is_in', 'Boolean', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3Boolean()
+    cobj2.initialValue.setValue((None, 1))
+    cobj2.initialValue.config = 1
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('is_out', 'Boolean', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3Boolean()
+    cobj2.initialValue.setValue((None, 1))
+    cobj2.initialValue.config = 1
+    lcobj2.append(cobj2)
+    self.obj28.attributes.setValue(lcobj2)
+
+    # cardinality
+    self.obj28.cardinality.setActionFlags([ 0, 1, 0, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('Association_3', (('Source', 'Destination'), 0), '0', 'N'))
+    lcobj2.append(cobj2)
+    self.obj28.cardinality.setValue(lcobj2)
+
+    # display
+    self.obj28.display.setValue('Attributes:\n  - name :: String\n  - is_in :: Boolean\n  - is_out :: Boolean\n')
+
+    # Constraints
+    self.obj28.Constraints.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    self.obj28.Constraints.setValue(lcobj2)
+
+    self.obj28.graphClass_= graph_Class3
+    if self.genGraphics:
+       new_obj = graph_Class3(279.573504,675.0,self.obj28)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("Class3", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.0, 1.0]
+    else: new_obj = None
+    self.obj28.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj28)
+    self.globalAndLocalPostcondition(self.obj28, rootNode)
+
+    self.obj29=Class3(self)
+    self.obj29.isGraphObjectVisual = True
+
+
+    # name
+    self.obj29.name.setValue('dServerV2')
+
+    # Abstract
+    self.obj29.Abstract.setValue((None, 0))
+    self.obj29.Abstract.config = 0
+
+    # Actions
+    self.obj29.Actions.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    self.obj29.Actions.setValue(lcobj2)
+
+    # Graphical_Appearance
+    self.obj29.Graphical_Appearance.setValue( ('dServerV2', self.obj29))
+
+    # attributes
+    self.obj29.attributes.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('id', 'String', None, ('Key', 1), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3String('Server')
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('name_pattern', 'String', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3String('')
+    lcobj2.append(cobj2)
+    self.obj29.attributes.setValue(lcobj2)
+
+    # cardinality
+    self.obj29.cardinality.setActionFlags([ 0, 1, 0, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('Association_3', (('Source', 'Destination'), 1), '0', 'N'))
+    lcobj2.append(cobj2)
+    self.obj29.cardinality.setValue(lcobj2)
+
+    # display
+    self.obj29.display.setValue('Attributes:\n  - id :: String\n  - name_pattern :: String\n')
+
+    # Constraints
+    self.obj29.Constraints.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    self.obj29.Constraints.setValue(lcobj2)
+
+    self.obj29.graphClass_= graph_Class3
+    if self.genGraphics:
+       new_obj = graph_Class3(780.0,677.818155423,self.obj29)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("Class3", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.0, 1.0]
+    else: new_obj = None
+    self.obj29.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj29)
+    self.globalAndLocalPostcondition(self.obj29, rootNode)
+
+    self.obj30=Association3(self)
+    self.obj30.isGraphObjectVisual = True
+
+
+    # QOCA
+    self.obj30.QOCA.setValue(('QOCA', (['Python', 'OCL'], 1), (['PREaction', 'POSTaction'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]), '# Specify your QOCA constraint here for now...\n# BETA version Template follows\n\n# Constraint only makes sense if there exists 2 objects connected to this link\nif(not (self.in_connections_ and self.out_connections_)): return\n\n# Get the graphical objects (subclass of graphEntity/graphLink) \ngraphicalObjectLink = self.graphObject_\ngraphicalObjectSource = self.in_connections_[0].graphObject_\ngraphicalObjectTarget = self.out_connections_[0].graphObject_\n\n# Get the high level constraint helper and solver\nfrom Qoca.atom3constraints.OffsetConstraints import OffsetConstraints\noc = OffsetConstraints(self.parent.qocaSolver)  \n\nobjTuple = (graphicalObjectSource, graphicalObjectTarget, graphicalObjectLink)\noc.LeftExactDistance(objTuple, 20)\n\n# NOTE: \n# Constraints are automatically removed on object deletion\n# Solve is triggered by drop action, and this here connect action\n\n'))
+
+    # name
+    self.obj30.name.setValue('dOrthogonalityV2')
+
+    # displaySelect
+    self.obj30.displaySelect.setValue( (['attributes', 'constraints', 'actions', 'cardinality'], [0, 0, 0, 0]) )
+    self.obj30.displaySelect.config = 0
+
+    # Actions
+    self.obj30.Actions.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    self.obj30.Actions.setValue(lcobj2)
+
+    # Graphical_Appearance
+    self.obj30.Graphical_Appearance.setValue( ('dOrthogonalityV2', self.obj30))
+    self.obj30.Graphical_Appearance.linkInfo=linkEditor(self,self.obj30.Graphical_Appearance.semObject, "dOrthogonalityV2")
+    self.obj30.Graphical_Appearance.linkInfo.FirstLink= stickylink()
+    self.obj30.Graphical_Appearance.linkInfo.FirstLink.arrow=ATOM3Boolean()
+    self.obj30.Graphical_Appearance.linkInfo.FirstLink.arrow.setValue((' ', 0))
+    self.obj30.Graphical_Appearance.linkInfo.FirstLink.arrow.config = 0
+    self.obj30.Graphical_Appearance.linkInfo.FirstLink.arrowShape1=ATOM3Integer(8)
+    self.obj30.Graphical_Appearance.linkInfo.FirstLink.arrowShape2=ATOM3Integer(10)
+    self.obj30.Graphical_Appearance.linkInfo.FirstLink.arrowShape3=ATOM3Integer(3)
+    self.obj30.Graphical_Appearance.linkInfo.FirstLink.decoration=ATOM3Appearance()
+    self.obj30.Graphical_Appearance.linkInfo.FirstLink.decoration.setValue( ('dOrthogonalityV2_1stLink', self.obj30.Graphical_Appearance.linkInfo.FirstLink))
+    self.obj30.Graphical_Appearance.linkInfo.FirstSegment= widthXfillXdecoration()
+    self.obj30.Graphical_Appearance.linkInfo.FirstSegment.width=ATOM3Integer(2)
+    self.obj30.Graphical_Appearance.linkInfo.FirstSegment.fill=ATOM3String('black')
+    self.obj30.Graphical_Appearance.linkInfo.FirstSegment.stipple=ATOM3String('')
+    self.obj30.Graphical_Appearance.linkInfo.FirstSegment.arrow=ATOM3Boolean()
+    self.obj30.Graphical_Appearance.linkInfo.FirstSegment.arrow.setValue((' ', 0))
+    self.obj30.Graphical_Appearance.linkInfo.FirstSegment.arrow.config = 0
+    self.obj30.Graphical_Appearance.linkInfo.FirstSegment.arrowShape1=ATOM3Integer(8)
+    self.obj30.Graphical_Appearance.linkInfo.FirstSegment.arrowShape2=ATOM3Integer(10)
+    self.obj30.Graphical_Appearance.linkInfo.FirstSegment.arrowShape3=ATOM3Integer(3)
+    self.obj30.Graphical_Appearance.linkInfo.FirstSegment.decoration=ATOM3Appearance()
+    self.obj30.Graphical_Appearance.linkInfo.FirstSegment.decoration.setValue( ('dOrthogonalityV2_1stSegment', self.obj30.Graphical_Appearance.linkInfo.FirstSegment))
+    self.obj30.Graphical_Appearance.linkInfo.FirstSegment.decoration_Position=ATOM3Enum(['Up', 'Down', 'Middle', 'No decoration'],3,0)
+    self.obj30.Graphical_Appearance.linkInfo.Center=ATOM3Appearance()
+    self.obj30.Graphical_Appearance.linkInfo.Center.setValue( ('dOrthogonalityV2_Center', self.obj30.Graphical_Appearance.linkInfo))
+    self.obj30.Graphical_Appearance.linkInfo.SecondSegment= widthXfillXdecoration()
+    self.obj30.Graphical_Appearance.linkInfo.SecondSegment.width=ATOM3Integer(2)
+    self.obj30.Graphical_Appearance.linkInfo.SecondSegment.fill=ATOM3String('black')
+    self.obj30.Graphical_Appearance.linkInfo.SecondSegment.stipple=ATOM3String('')
+    self.obj30.Graphical_Appearance.linkInfo.SecondSegment.arrow=ATOM3Boolean()
+    self.obj30.Graphical_Appearance.linkInfo.SecondSegment.arrow.setValue((' ', 0))
+    self.obj30.Graphical_Appearance.linkInfo.SecondSegment.arrow.config = 0
+    self.obj30.Graphical_Appearance.linkInfo.SecondSegment.arrowShape1=ATOM3Integer(8)
+    self.obj30.Graphical_Appearance.linkInfo.SecondSegment.arrowShape2=ATOM3Integer(10)
+    self.obj30.Graphical_Appearance.linkInfo.SecondSegment.arrowShape3=ATOM3Integer(3)
+    self.obj30.Graphical_Appearance.linkInfo.SecondSegment.decoration=ATOM3Appearance()
+    self.obj30.Graphical_Appearance.linkInfo.SecondSegment.decoration.setValue( ('dOrthogonalityV2_2ndSegment', self.obj30.Graphical_Appearance.linkInfo.SecondSegment))
+    self.obj30.Graphical_Appearance.linkInfo.SecondSegment.decoration_Position=ATOM3Enum(['Up', 'Down', 'Middle', 'No decoration'],3,0)
+    self.obj30.Graphical_Appearance.linkInfo.SecondLink= stickylink()
+    self.obj30.Graphical_Appearance.linkInfo.SecondLink.arrow=ATOM3Boolean()
+    self.obj30.Graphical_Appearance.linkInfo.SecondLink.arrow.setValue((' ', 1))
+    self.obj30.Graphical_Appearance.linkInfo.SecondLink.arrow.config = 0
+    self.obj30.Graphical_Appearance.linkInfo.SecondLink.arrowShape1=ATOM3Integer(8)
+    self.obj30.Graphical_Appearance.linkInfo.SecondLink.arrowShape2=ATOM3Integer(10)
+    self.obj30.Graphical_Appearance.linkInfo.SecondLink.arrowShape3=ATOM3Integer(3)
+    self.obj30.Graphical_Appearance.linkInfo.SecondLink.decoration=ATOM3Appearance()
+    self.obj30.Graphical_Appearance.linkInfo.SecondLink.decoration.setValue( ('dOrthogonalityV2_2ndLink', self.obj30.Graphical_Appearance.linkInfo.SecondLink))
+    self.obj30.Graphical_Appearance.linkInfo.FirstLink.decoration.semObject=self.obj30.Graphical_Appearance.semObject
+    self.obj30.Graphical_Appearance.linkInfo.FirstSegment.decoration.semObject=self.obj30.Graphical_Appearance.semObject
+    self.obj30.Graphical_Appearance.linkInfo.Center.semObject=self.obj30.Graphical_Appearance.semObject
+    self.obj30.Graphical_Appearance.linkInfo.SecondSegment.decoration.semObject=self.obj30.Graphical_Appearance.semObject
+    self.obj30.Graphical_Appearance.linkInfo.SecondLink.decoration.semObject=self.obj30.Graphical_Appearance.semObject
+
+    # attributes
+    self.obj30.attributes.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    self.obj30.attributes.setValue(lcobj2)
+
+    # cardinality
+    self.obj30.cardinality.setActionFlags([ 0, 1, 0, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dOrthogonalV2', (('Source', 'Destination'), 0), '0', 'N'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dCompositeV2', (('Source', 'Destination'), 1), '0', 'N'))
+    lcobj2.append(cobj2)
+    self.obj30.cardinality.setValue(lcobj2)
+
+    # display
+    self.obj30.display.setValue('Constraints:\n  > orthogonality_CREATE\n  > orthogonality_CONNECT\n  < orthogonality_DELETE\n')
+
+    # Constraints
+    self.obj30.Constraints.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('orthogonality_CREATE', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]), 'import DCharts_utils\nDCharts_utils.orthogonality_CREATE(self)\n\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('orthogonality_CONNECT', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]), 'import DCharts_utils\nDCharts_utils.orthogonality_CONNECT(self)\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('orthogonality_DELETE', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 0), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0]), 'import DCharts_utils\nDCharts_utils.orthogonality_DELETE(self)\n'))
+    lcobj2.append(cobj2)
+    self.obj30.Constraints.setValue(lcobj2)
+
+    self.obj30.graphClass_= graph_Association3
+    if self.genGraphics:
+       new_obj = graph_Association3(141.0,400.12,self.obj30)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("Association3", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.3720000000000001, 1.0]
+    else: new_obj = None
+    self.obj30.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj30)
+    self.globalAndLocalPostcondition(self.obj30, rootNode)
+
+    self.obj31=Association3(self)
+    self.obj31.isGraphObjectVisual = True
+
+
+    # QOCA
+    self.obj31.QOCA.setValue(('QOCA', (['Python', 'OCL'], 1), (['PREaction', 'POSTaction'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]), '# Specify your QOCA constraint here for now...\n# BETA version Template follows\n\n# Constraint only makes sense if there exists 2 objects connected to this link\nif(not (self.in_connections_ and self.out_connections_)): return\n\n# Get the graphical objects (subclass of graphEntity/graphLink) \ngraphicalObjectLink = self.graphObject_\ngraphicalObjectSource = self.in_connections_[0].graphObject_\ngraphicalObjectTarget = self.out_connections_[0].graphObject_\n\n# Get the high level constraint helper and solver\nfrom Qoca.atom3constraints.OffsetConstraints import OffsetConstraints\noc = OffsetConstraints(self.parent.qocaSolver)  \n\nobjTuple = (graphicalObjectSource, graphicalObjectTarget, graphicalObjectLink)\noc.LeftExactDistance(objTuple, 20)\n\n# NOTE: \n# Constraints are automatically removed on object deletion\n# Solve is triggered by drop action, and this here connect action\n\n'))
+
+    # name
+    self.obj31.name.setValue('dContainsV2')
+
+    # displaySelect
+    self.obj31.displaySelect.setValue( (['attributes', 'constraints', 'actions', 'cardinality'], [0, 0, 0, 0]) )
+    self.obj31.displaySelect.config = 0
+
+    # Actions
+    self.obj31.Actions.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    self.obj31.Actions.setValue(lcobj2)
+
+    # Graphical_Appearance
+    self.obj31.Graphical_Appearance.setValue( ('dContainsV2', self.obj31))
+    self.obj31.Graphical_Appearance.linkInfo=linkEditor(self,self.obj31.Graphical_Appearance.semObject, "dContainsV2")
+    self.obj31.Graphical_Appearance.linkInfo.FirstLink= stickylink()
+    self.obj31.Graphical_Appearance.linkInfo.FirstLink.arrow=ATOM3Boolean()
+    self.obj31.Graphical_Appearance.linkInfo.FirstLink.arrow.setValue((' ', 0))
+    self.obj31.Graphical_Appearance.linkInfo.FirstLink.arrow.config = 0
+    self.obj31.Graphical_Appearance.linkInfo.FirstLink.arrowShape1=ATOM3Integer(8)
+    self.obj31.Graphical_Appearance.linkInfo.FirstLink.arrowShape2=ATOM3Integer(10)
+    self.obj31.Graphical_Appearance.linkInfo.FirstLink.arrowShape3=ATOM3Integer(3)
+    self.obj31.Graphical_Appearance.linkInfo.FirstLink.decoration=ATOM3Appearance()
+    self.obj31.Graphical_Appearance.linkInfo.FirstLink.decoration.setValue( ('dContainsV2_1stLink', self.obj31.Graphical_Appearance.linkInfo.FirstLink))
+    self.obj31.Graphical_Appearance.linkInfo.FirstSegment= widthXfillXdecoration()
+    self.obj31.Graphical_Appearance.linkInfo.FirstSegment.width=ATOM3Integer(2)
+    self.obj31.Graphical_Appearance.linkInfo.FirstSegment.fill=ATOM3String('black')
+    self.obj31.Graphical_Appearance.linkInfo.FirstSegment.stipple=ATOM3String('')
+    self.obj31.Graphical_Appearance.linkInfo.FirstSegment.arrow=ATOM3Boolean()
+    self.obj31.Graphical_Appearance.linkInfo.FirstSegment.arrow.setValue((' ', 0))
+    self.obj31.Graphical_Appearance.linkInfo.FirstSegment.arrow.config = 0
+    self.obj31.Graphical_Appearance.linkInfo.FirstSegment.arrowShape1=ATOM3Integer(8)
+    self.obj31.Graphical_Appearance.linkInfo.FirstSegment.arrowShape2=ATOM3Integer(10)
+    self.obj31.Graphical_Appearance.linkInfo.FirstSegment.arrowShape3=ATOM3Integer(3)
+    self.obj31.Graphical_Appearance.linkInfo.FirstSegment.decoration=ATOM3Appearance()
+    self.obj31.Graphical_Appearance.linkInfo.FirstSegment.decoration.setValue( ('dContainsV2_1stSegment', self.obj31.Graphical_Appearance.linkInfo.FirstSegment))
+    self.obj31.Graphical_Appearance.linkInfo.FirstSegment.decoration_Position=ATOM3Enum(['Up', 'Down', 'Middle', 'No decoration'],3,0)
+    self.obj31.Graphical_Appearance.linkInfo.Center=ATOM3Appearance()
+    self.obj31.Graphical_Appearance.linkInfo.Center.setValue( ('dContainsV2_Center', self.obj31.Graphical_Appearance.linkInfo))
+    self.obj31.Graphical_Appearance.linkInfo.SecondSegment= widthXfillXdecoration()
+    self.obj31.Graphical_Appearance.linkInfo.SecondSegment.width=ATOM3Integer(2)
+    self.obj31.Graphical_Appearance.linkInfo.SecondSegment.fill=ATOM3String('black')
+    self.obj31.Graphical_Appearance.linkInfo.SecondSegment.stipple=ATOM3String('')
+    self.obj31.Graphical_Appearance.linkInfo.SecondSegment.arrow=ATOM3Boolean()
+    self.obj31.Graphical_Appearance.linkInfo.SecondSegment.arrow.setValue((' ', 0))
+    self.obj31.Graphical_Appearance.linkInfo.SecondSegment.arrow.config = 0
+    self.obj31.Graphical_Appearance.linkInfo.SecondSegment.arrowShape1=ATOM3Integer(8)
+    self.obj31.Graphical_Appearance.linkInfo.SecondSegment.arrowShape2=ATOM3Integer(10)
+    self.obj31.Graphical_Appearance.linkInfo.SecondSegment.arrowShape3=ATOM3Integer(3)
+    self.obj31.Graphical_Appearance.linkInfo.SecondSegment.decoration=ATOM3Appearance()
+    self.obj31.Graphical_Appearance.linkInfo.SecondSegment.decoration.setValue( ('dContainsV2_2ndSegment', self.obj31.Graphical_Appearance.linkInfo.SecondSegment))
+    self.obj31.Graphical_Appearance.linkInfo.SecondSegment.decoration_Position=ATOM3Enum(['Up', 'Down', 'Middle', 'No decoration'],3,0)
+    self.obj31.Graphical_Appearance.linkInfo.SecondLink= stickylink()
+    self.obj31.Graphical_Appearance.linkInfo.SecondLink.arrow=ATOM3Boolean()
+    self.obj31.Graphical_Appearance.linkInfo.SecondLink.arrow.setValue((' ', 1))
+    self.obj31.Graphical_Appearance.linkInfo.SecondLink.arrow.config = 0
+    self.obj31.Graphical_Appearance.linkInfo.SecondLink.arrowShape1=ATOM3Integer(8)
+    self.obj31.Graphical_Appearance.linkInfo.SecondLink.arrowShape2=ATOM3Integer(10)
+    self.obj31.Graphical_Appearance.linkInfo.SecondLink.arrowShape3=ATOM3Integer(3)
+    self.obj31.Graphical_Appearance.linkInfo.SecondLink.decoration=ATOM3Appearance()
+    self.obj31.Graphical_Appearance.linkInfo.SecondLink.decoration.setValue( ('dContainsV2_2ndLink', self.obj31.Graphical_Appearance.linkInfo.SecondLink))
+    self.obj31.Graphical_Appearance.linkInfo.FirstLink.decoration.semObject=self.obj31.Graphical_Appearance.semObject
+    self.obj31.Graphical_Appearance.linkInfo.FirstSegment.decoration.semObject=self.obj31.Graphical_Appearance.semObject
+    self.obj31.Graphical_Appearance.linkInfo.Center.semObject=self.obj31.Graphical_Appearance.semObject
+    self.obj31.Graphical_Appearance.linkInfo.SecondSegment.decoration.semObject=self.obj31.Graphical_Appearance.semObject
+    self.obj31.Graphical_Appearance.linkInfo.SecondLink.decoration.semObject=self.obj31.Graphical_Appearance.semObject
+
+    # attributes
+    self.obj31.attributes.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    self.obj31.attributes.setValue(lcobj2)
+
+    # cardinality
+    self.obj31.cardinality.setActionFlags([ 0, 1, 0, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dCompositeV2', (('Source', 'Destination'), 0), '0', 'N'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dOrthogonalV2', (('Source', 'Destination'), 1), '0', 'N'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dCompositeV2', (('Source', 'Destination'), 1), '0', 'N'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dHistoryV2', (('Source', 'Destination'), 0), '0', 'N'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dBasicV2', (('Source', 'Destination'), 0), '0', 'N'))
+    lcobj2.append(cobj2)
+    self.obj31.cardinality.setValue(lcobj2)
+
+    # display
+    self.obj31.display.setValue('Constraints:\n  > contains_CREATE\n  > contains_CONNECT\n  < contains_DELETE\n')
+
+    # Constraints
+    self.obj31.Constraints.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('contains_CREATE', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]), 'import DCharts_utils\nDCharts_utils.contains_CREATE(self)\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('contains_CONNECT', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]), 'import DCharts_utils\nDCharts_utils.contains_CONNECT(self)\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('contains_DELETE', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 0), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0]), 'import DCharts_utils\nDCharts_utils.contains_DELETE(self)\n\n'))
+    lcobj2.append(cobj2)
+    self.obj31.Constraints.setValue(lcobj2)
+
+    self.obj31.graphClass_= graph_Association3
+    if self.genGraphics:
+       new_obj = graph_Association3(400.0,402.0,self.obj31)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("Association3", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.1620000000000001, 1.0]
+    else: new_obj = None
+    self.obj31.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj31)
+    self.globalAndLocalPostcondition(self.obj31, rootNode)
+
+    self.obj32=Association3(self)
+    self.obj32.isGraphObjectVisual = True
+
+
+    # QOCA
+    self.obj32.QOCA.setValue(('QOCA', (['Python', 'OCL'], 1), (['PREaction', 'POSTaction'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]), '# Specify your QOCA constraint here for now...\n# BETA version Template follows\n\n# Constraint only makes sense if there exists 2 objects connected to this link\nif(not (self.in_connections_ and self.out_connections_)): return\n\n# Get the graphical objects (subclass of graphEntity/graphLink) \ngraphicalObjectLink = self.graphObject_\ngraphicalObjectSource = self.in_connections_[0].graphObject_\ngraphicalObjectTarget = self.out_connections_[0].graphObject_\n\n# Get the high level constraint helper and solver\nfrom Qoca.atom3constraints.OffsetConstraints import OffsetConstraints\noc = OffsetConstraints(self.parent.qocaSolver)  \n\nobjTuple = (graphicalObjectSource, graphicalObjectTarget, graphicalObjectLink)\noc.LeftExactDistance(objTuple, 20)\n\n# NOTE: \n# Constraints are automatically removed on object deletion\n# Solve is triggered by drop action, and this here connect action\n\n'))
+
+    # name
+    self.obj32.name.setValue('dHyperedgeV2')
+
+    # displaySelect
+    self.obj32.displaySelect.setValue( (['attributes', 'constraints', 'actions', 'cardinality'], [0, 0, 0, 0]) )
+    self.obj32.displaySelect.config = 0
+
+    # Actions
+    self.obj32.Actions.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    self.obj32.Actions.setValue(lcobj2)
+
+    # Graphical_Appearance
+    self.obj32.Graphical_Appearance.setValue( ('dHyperedgeV2', self.obj32))
+    self.obj32.Graphical_Appearance.linkInfo=linkEditor(self,self.obj32.Graphical_Appearance.semObject, "dHyperedgeV2")
+    self.obj32.Graphical_Appearance.linkInfo.FirstLink= stickylink()
+    self.obj32.Graphical_Appearance.linkInfo.FirstLink.arrow=ATOM3Boolean()
+    self.obj32.Graphical_Appearance.linkInfo.FirstLink.arrow.setValue((' ', 0))
+    self.obj32.Graphical_Appearance.linkInfo.FirstLink.arrow.config = 0
+    self.obj32.Graphical_Appearance.linkInfo.FirstLink.arrowShape1=ATOM3Integer(8)
+    self.obj32.Graphical_Appearance.linkInfo.FirstLink.arrowShape2=ATOM3Integer(10)
+    self.obj32.Graphical_Appearance.linkInfo.FirstLink.arrowShape3=ATOM3Integer(3)
+    self.obj32.Graphical_Appearance.linkInfo.FirstLink.decoration=ATOM3Appearance()
+    self.obj32.Graphical_Appearance.linkInfo.FirstLink.decoration.setValue( ('dHyperedgeV2_1stLink', self.obj32.Graphical_Appearance.linkInfo.FirstLink))
+    self.obj32.Graphical_Appearance.linkInfo.FirstSegment= widthXfillXdecoration()
+    self.obj32.Graphical_Appearance.linkInfo.FirstSegment.width=ATOM3Integer(2)
+    self.obj32.Graphical_Appearance.linkInfo.FirstSegment.fill=ATOM3String('black')
+    self.obj32.Graphical_Appearance.linkInfo.FirstSegment.stipple=ATOM3String('')
+    self.obj32.Graphical_Appearance.linkInfo.FirstSegment.arrow=ATOM3Boolean()
+    self.obj32.Graphical_Appearance.linkInfo.FirstSegment.arrow.setValue((' ', 0))
+    self.obj32.Graphical_Appearance.linkInfo.FirstSegment.arrow.config = 0
+    self.obj32.Graphical_Appearance.linkInfo.FirstSegment.arrowShape1=ATOM3Integer(8)
+    self.obj32.Graphical_Appearance.linkInfo.FirstSegment.arrowShape2=ATOM3Integer(10)
+    self.obj32.Graphical_Appearance.linkInfo.FirstSegment.arrowShape3=ATOM3Integer(3)
+    self.obj32.Graphical_Appearance.linkInfo.FirstSegment.decoration=ATOM3Appearance()
+    self.obj32.Graphical_Appearance.linkInfo.FirstSegment.decoration.setValue( ('dHyperedgeV2_1stSegment', self.obj32.Graphical_Appearance.linkInfo.FirstSegment))
+    self.obj32.Graphical_Appearance.linkInfo.FirstSegment.decoration_Position=ATOM3Enum(['Up', 'Down', 'Middle', 'No decoration'],3,0)
+    self.obj32.Graphical_Appearance.linkInfo.Center=ATOM3Appearance()
+    self.obj32.Graphical_Appearance.linkInfo.Center.setValue( ('dHyperedgeV2_Center', self.obj32.Graphical_Appearance.linkInfo))
+    self.obj32.Graphical_Appearance.linkInfo.SecondSegment= widthXfillXdecoration()
+    self.obj32.Graphical_Appearance.linkInfo.SecondSegment.width=ATOM3Integer(2)
+    self.obj32.Graphical_Appearance.linkInfo.SecondSegment.fill=ATOM3String('black')
+    self.obj32.Graphical_Appearance.linkInfo.SecondSegment.stipple=ATOM3String('')
+    self.obj32.Graphical_Appearance.linkInfo.SecondSegment.arrow=ATOM3Boolean()
+    self.obj32.Graphical_Appearance.linkInfo.SecondSegment.arrow.setValue((' ', 0))
+    self.obj32.Graphical_Appearance.linkInfo.SecondSegment.arrow.config = 0
+    self.obj32.Graphical_Appearance.linkInfo.SecondSegment.arrowShape1=ATOM3Integer(8)
+    self.obj32.Graphical_Appearance.linkInfo.SecondSegment.arrowShape2=ATOM3Integer(10)
+    self.obj32.Graphical_Appearance.linkInfo.SecondSegment.arrowShape3=ATOM3Integer(3)
+    self.obj32.Graphical_Appearance.linkInfo.SecondSegment.decoration=ATOM3Appearance()
+    self.obj32.Graphical_Appearance.linkInfo.SecondSegment.decoration.setValue( ('dHyperedgeV2_2ndSegment', self.obj32.Graphical_Appearance.linkInfo.SecondSegment))
+    self.obj32.Graphical_Appearance.linkInfo.SecondSegment.decoration_Position=ATOM3Enum(['Up', 'Down', 'Middle', 'No decoration'],3,0)
+    self.obj32.Graphical_Appearance.linkInfo.SecondLink= stickylink()
+    self.obj32.Graphical_Appearance.linkInfo.SecondLink.arrow=ATOM3Boolean()
+    self.obj32.Graphical_Appearance.linkInfo.SecondLink.arrow.setValue((' ', 1))
+    self.obj32.Graphical_Appearance.linkInfo.SecondLink.arrow.config = 0
+    self.obj32.Graphical_Appearance.linkInfo.SecondLink.arrowShape1=ATOM3Integer(8)
+    self.obj32.Graphical_Appearance.linkInfo.SecondLink.arrowShape2=ATOM3Integer(10)
+    self.obj32.Graphical_Appearance.linkInfo.SecondLink.arrowShape3=ATOM3Integer(3)
+    self.obj32.Graphical_Appearance.linkInfo.SecondLink.decoration=ATOM3Appearance()
+    self.obj32.Graphical_Appearance.linkInfo.SecondLink.decoration.setValue( ('dHyperedgeV2_2ndLink', self.obj32.Graphical_Appearance.linkInfo.SecondLink))
+    self.obj32.Graphical_Appearance.linkInfo.FirstLink.decoration.semObject=self.obj32.Graphical_Appearance.semObject
+    self.obj32.Graphical_Appearance.linkInfo.FirstSegment.decoration.semObject=self.obj32.Graphical_Appearance.semObject
+    self.obj32.Graphical_Appearance.linkInfo.Center.semObject=self.obj32.Graphical_Appearance.semObject
+    self.obj32.Graphical_Appearance.linkInfo.SecondSegment.decoration.semObject=self.obj32.Graphical_Appearance.semObject
+    self.obj32.Graphical_Appearance.linkInfo.SecondLink.decoration.semObject=self.obj32.Graphical_Appearance.semObject
+
+    # attributes
+    self.obj32.attributes.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('trigger', 'String', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3String('')
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('guard', 'String', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3String('1')
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('action', 'Text', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3Text('', 60,15 )
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('broadcast', 'Text', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3Text('# return an instance of DEVSevent or None\nreturn None\n', 60,15 )
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('broadcast_to', 'String', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3String('')
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('name', 'String', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3String('')
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('display', 'String', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3String('')
+    lcobj2.append(cobj2)
+    self.obj32.attributes.setValue(lcobj2)
+
+    # cardinality
+    self.obj32.cardinality.setActionFlags([ 0, 1, 0, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dBasicV2', (('Source', 'Destination'), 0), '0', 'N'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dCompositeV2', (('Source', 'Destination'), 1), '0', 'N'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dCompositeV2', (('Source', 'Destination'), 0), '0', 'N'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dHistoryV2', (('Source', 'Destination'), 0), '0', 'N'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dBasicV2', (('Source', 'Destination'), 1), '0', 'N'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dHistoryV2', (('Source', 'Destination'), 1), '0', 'N'))
+    lcobj2.append(cobj2)
+    self.obj32.cardinality.setValue(lcobj2)
+
+    # display
+    self.obj32.display.setValue('Attributes:\n  - trigger :: String\n  - guard :: String\n  - action :: Text\n  - broadcast :: Text\n  - broadcast_to :: String\n  - name :: String\n  - display :: String\nConstraints:\n  > Hyperedge_CREATE\n  > Hyperedge_CONNECT\n  < Hyperedge_DELETE\n  > Hyperedge_DROP\n  > Hyperedge_MOVE\n')
+
+    # Constraints
+    self.obj32.Constraints.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('Hyperedge_CREATE', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]), 'import DCharts_utils\nDCharts_utils.Hyperedge_CREATE(self)\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('Hyperedge_CONNECT', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]), 'import DCharts_utils\nDCharts_utils.Hyperedge_CONNECT(self)\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('Hyperedge_DELETE', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 0), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]), 'import DCharts_utils\nDCharts_utils.Hyperedge_DELETE(self)\n\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('Hyperedge_DROP', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]), 'import DCharts_utils\nDCharts_utils.Hyperedge_DROP(self)\n'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Constraint()
+    cobj2.setValue(('Hyperedge_MOVE', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]), 'import DCharts_utils\nDCharts_utils.Hyperedge_MOVE(self)\n'))
+    lcobj2.append(cobj2)
+    self.obj32.Constraints.setValue(lcobj2)
+
+    self.obj32.graphClass_= graph_Association3
+    if self.genGraphics:
+       new_obj = graph_Association3(700.0,180.0,self.obj32)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("Association3", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.2949999999999999, 2.8451612903225807]
+    else: new_obj = None
+    self.obj32.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj32)
+    self.globalAndLocalPostcondition(self.obj32, rootNode)
+
+    self.obj33=Association3(self)
+    self.obj33.isGraphObjectVisual = True
+
+
+    # QOCA
+    self.obj33.QOCA.setValue(('QOCA', (['Python', 'OCL'], 1), (['PREaction', 'POSTaction'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]), '# Specify your QOCA constraint here for now...\n# BETA version Template follows\n\n# Constraint only makes sense if there exists 2 objects connected to this link\nif(not (self.in_connections_ and self.out_connections_)): return\n\n# Get the graphical objects (subclass of graphEntity/graphLink) \ngraphicalObjectLink = self.graphObject_\ngraphicalObjectSource = self.in_connections_[0].graphObject_\ngraphicalObjectTarget = self.out_connections_[0].graphObject_\n\n# Get the high level constraint helper and solver\nfrom Qoca.atom3constraints.OffsetConstraints import OffsetConstraints\noc = OffsetConstraints(self.parent.qocaSolver)  \n\nobjTuple = (graphicalObjectSource, graphicalObjectTarget, graphicalObjectLink)\noc.LeftExactDistance(objTuple, 20)\n\n# NOTE: \n# Constraints are automatically removed on object deletion\n# Solve is triggered by drop action, and this here connect action\n\n'))
+
+    # name
+    self.obj33.name.setValue('Association_3')
+
+    # displaySelect
+    self.obj33.displaySelect.setValue( (['attributes', 'constraints', 'actions', 'cardinality'], [0, 0, 0, 0]) )
+    self.obj33.displaySelect.config = 0
+
+    # Actions
+    self.obj33.Actions.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    self.obj33.Actions.setValue(lcobj2)
+
+    # Graphical_Appearance
+    self.obj33.Graphical_Appearance.setValue( ('Association_3', self.obj33))
+    self.obj33.Graphical_Appearance.linkInfo=linkEditor(self,self.obj33.Graphical_Appearance.semObject, "Association_3")
+    self.obj33.Graphical_Appearance.linkInfo.FirstLink= stickylink()
+    self.obj33.Graphical_Appearance.linkInfo.FirstLink.arrow=ATOM3Boolean()
+    self.obj33.Graphical_Appearance.linkInfo.FirstLink.arrow.setValue((' ', 0))
+    self.obj33.Graphical_Appearance.linkInfo.FirstLink.arrow.config = 0
+    self.obj33.Graphical_Appearance.linkInfo.FirstLink.arrowShape1=ATOM3Integer(8)
+    self.obj33.Graphical_Appearance.linkInfo.FirstLink.arrowShape2=ATOM3Integer(10)
+    self.obj33.Graphical_Appearance.linkInfo.FirstLink.arrowShape3=ATOM3Integer(3)
+    self.obj33.Graphical_Appearance.linkInfo.FirstLink.decoration=ATOM3Appearance()
+    self.obj33.Graphical_Appearance.linkInfo.FirstLink.decoration.setValue( ('Association_3_1stLink', self.obj33.Graphical_Appearance.linkInfo.FirstLink))
+    self.obj33.Graphical_Appearance.linkInfo.FirstSegment= widthXfillXdecoration()
+    self.obj33.Graphical_Appearance.linkInfo.FirstSegment.width=ATOM3Integer(2)
+    self.obj33.Graphical_Appearance.linkInfo.FirstSegment.fill=ATOM3String('black')
+    self.obj33.Graphical_Appearance.linkInfo.FirstSegment.stipple=ATOM3String('')
+    self.obj33.Graphical_Appearance.linkInfo.FirstSegment.arrow=ATOM3Boolean()
+    self.obj33.Graphical_Appearance.linkInfo.FirstSegment.arrow.setValue((' ', 0))
+    self.obj33.Graphical_Appearance.linkInfo.FirstSegment.arrow.config = 0
+    self.obj33.Graphical_Appearance.linkInfo.FirstSegment.arrowShape1=ATOM3Integer(8)
+    self.obj33.Graphical_Appearance.linkInfo.FirstSegment.arrowShape2=ATOM3Integer(10)
+    self.obj33.Graphical_Appearance.linkInfo.FirstSegment.arrowShape3=ATOM3Integer(3)
+    self.obj33.Graphical_Appearance.linkInfo.FirstSegment.decoration=ATOM3Appearance()
+    self.obj33.Graphical_Appearance.linkInfo.FirstSegment.decoration.setValue( ('Association_3_1stSegment', self.obj33.Graphical_Appearance.linkInfo.FirstSegment))
+    self.obj33.Graphical_Appearance.linkInfo.FirstSegment.decoration_Position=ATOM3Enum(['Up', 'Down', 'Middle', 'No decoration'],3,0)
+    self.obj33.Graphical_Appearance.linkInfo.Center=ATOM3Appearance()
+    self.obj33.Graphical_Appearance.linkInfo.Center.setValue( ('Association_3_Center', self.obj33.Graphical_Appearance.linkInfo))
+    self.obj33.Graphical_Appearance.linkInfo.SecondSegment= widthXfillXdecoration()
+    self.obj33.Graphical_Appearance.linkInfo.SecondSegment.width=ATOM3Integer(2)
+    self.obj33.Graphical_Appearance.linkInfo.SecondSegment.fill=ATOM3String('black')
+    self.obj33.Graphical_Appearance.linkInfo.SecondSegment.stipple=ATOM3String('')
+    self.obj33.Graphical_Appearance.linkInfo.SecondSegment.arrow=ATOM3Boolean()
+    self.obj33.Graphical_Appearance.linkInfo.SecondSegment.arrow.setValue((' ', 0))
+    self.obj33.Graphical_Appearance.linkInfo.SecondSegment.arrow.config = 0
+    self.obj33.Graphical_Appearance.linkInfo.SecondSegment.arrowShape1=ATOM3Integer(8)
+    self.obj33.Graphical_Appearance.linkInfo.SecondSegment.arrowShape2=ATOM3Integer(10)
+    self.obj33.Graphical_Appearance.linkInfo.SecondSegment.arrowShape3=ATOM3Integer(3)
+    self.obj33.Graphical_Appearance.linkInfo.SecondSegment.decoration=ATOM3Appearance()
+    self.obj33.Graphical_Appearance.linkInfo.SecondSegment.decoration.setValue( ('Association_3_2ndSegment', self.obj33.Graphical_Appearance.linkInfo.SecondSegment))
+    self.obj33.Graphical_Appearance.linkInfo.SecondSegment.decoration_Position=ATOM3Enum(['Up', 'Down', 'Middle', 'No decoration'],3,0)
+    self.obj33.Graphical_Appearance.linkInfo.SecondLink= stickylink()
+    self.obj33.Graphical_Appearance.linkInfo.SecondLink.arrow=ATOM3Boolean()
+    self.obj33.Graphical_Appearance.linkInfo.SecondLink.arrow.setValue((' ', 1))
+    self.obj33.Graphical_Appearance.linkInfo.SecondLink.arrow.config = 0
+    self.obj33.Graphical_Appearance.linkInfo.SecondLink.arrowShape1=ATOM3Integer(8)
+    self.obj33.Graphical_Appearance.linkInfo.SecondLink.arrowShape2=ATOM3Integer(10)
+    self.obj33.Graphical_Appearance.linkInfo.SecondLink.arrowShape3=ATOM3Integer(3)
+    self.obj33.Graphical_Appearance.linkInfo.SecondLink.decoration=ATOM3Appearance()
+    self.obj33.Graphical_Appearance.linkInfo.SecondLink.decoration.setValue( ('Association_3_2ndLink', self.obj33.Graphical_Appearance.linkInfo.SecondLink))
+    self.obj33.Graphical_Appearance.linkInfo.FirstLink.decoration.semObject=self.obj33.Graphical_Appearance.semObject
+    self.obj33.Graphical_Appearance.linkInfo.FirstSegment.decoration.semObject=self.obj33.Graphical_Appearance.semObject
+    self.obj33.Graphical_Appearance.linkInfo.Center.semObject=self.obj33.Graphical_Appearance.semObject
+    self.obj33.Graphical_Appearance.linkInfo.SecondSegment.decoration.semObject=self.obj33.Graphical_Appearance.semObject
+    self.obj33.Graphical_Appearance.linkInfo.SecondLink.decoration.semObject=self.obj33.Graphical_Appearance.semObject
+
+    # attributes
+    self.obj33.attributes.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('server_port', 'String', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3String('port')
+    lcobj2.append(cobj2)
+    self.obj33.attributes.setValue(lcobj2)
+
+    # cardinality
+    self.obj33.cardinality.setActionFlags([ 0, 1, 0, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dServerV2', (('Source', 'Destination'), 0), '0', 'N'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('dPortV2', (('Source', 'Destination'), 1), '0', 'N'))
+    lcobj2.append(cobj2)
+    self.obj33.cardinality.setValue(lcobj2)
+
+    # display
+    self.obj33.display.setValue('Attributes:\n  - server_port :: String\n')
+
+    # Constraints
+    self.obj33.Constraints.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    self.obj33.Constraints.setValue(lcobj2)
+
+    self.obj33.graphClass_= graph_Association3
+    if self.genGraphics:
+       new_obj = graph_Association3(613.591184872,746.466179836,self.obj33)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("Association3", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.071, 1.0]
+    else: new_obj = None
+    self.obj33.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj33)
+    self.globalAndLocalPostcondition(self.obj33, rootNode)
+
+    self.obj45=ERentity(self)
+    self.obj45.isGraphObjectVisual = True
+
+
+    # attributes
+    self.obj45.attributes.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('name', 'String', None, ('Key', 1), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3String('Port')
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('is_in', 'Boolean', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3Boolean()
+    cobj2.initialValue.setValue((None, 1))
+    cobj2.initialValue.config = 1
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('is_out', 'Boolean', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3Boolean()
+    cobj2.initialValue.setValue((None, 1))
+    cobj2.initialValue.config = 1
+    lcobj2.append(cobj2)
+    self.obj45.attributes.setValue(lcobj2)
+
+    # cardinality
+    self.obj45.cardinality.setActionFlags([ 0, 1, 0, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('connection', (('Source', 'Destination'), 0), '0', 'N'))
+    lcobj2.append(cobj2)
+    self.obj45.cardinality.setValue(lcobj2)
+
+    # appearance
+    self.obj45.appearance.setValue( ('Port', self.obj45))
+
+    # name
+    self.obj45.name.setValue('Port')
+
+    # constraints
+    self.obj45.constraints.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    self.obj45.constraints.setValue(lcobj2)
+
+    self.obj45.graphClass_= graph_ERentity
+    if self.genGraphics:
+       new_obj = graph_ERentity(980.0,40.0,self.obj45)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("ERentity", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.6000000000000005, 0.97999999999999998]
+    else: new_obj = None
+    self.obj45.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj45)
+    self.globalAndLocalPostcondition(self.obj45, rootNode)
+
+    self.obj46=ERentity(self)
+    self.obj46.isGraphObjectVisual = True
+
+
+    # attributes
+    self.obj46.attributes.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('id', 'String', None, ('Key', 1), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3String('Server')
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('name_pattern', 'String', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3String('')
+    lcobj2.append(cobj2)
+    self.obj46.attributes.setValue(lcobj2)
+
+    # cardinality
+    self.obj46.cardinality.setActionFlags([ 0, 1, 0, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('connection', (('Source', 'Destination'), 1), '0', 'N'))
+    lcobj2.append(cobj2)
+    self.obj46.cardinality.setValue(lcobj2)
+
+    # appearance
+    self.obj46.appearance.setValue( ('Server', self.obj46))
+
+    # name
+    self.obj46.name.setValue('Server')
+
+    # constraints
+    self.obj46.constraints.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    self.obj46.constraints.setValue(lcobj2)
+
+    self.obj46.graphClass_= graph_ERentity
+    if self.genGraphics:
+       new_obj = graph_ERentity(960.0,280.0,self.obj46)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("ERentity", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.6700000000000006, 0.86999999999999988]
+    else: new_obj = None
+    self.obj46.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj46)
+    self.globalAndLocalPostcondition(self.obj46, rootNode)
+
+    self.obj50=ERrelationship(self)
+    self.obj50.isGraphObjectVisual = True
+
+
+    # attributes
+    self.obj50.attributes.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Attribute(self.types)
+    cobj2.setValue(('server_port', 'String', None, ('Key', 0), ('Direct Editing', 1)))
+    cobj2.initialValue=ATOM3String('port')
+    lcobj2.append(cobj2)
+    self.obj50.attributes.setValue(lcobj2)
+
+    # cardinality
+    self.obj50.cardinality.setActionFlags([ 0, 1, 0, 0])
+    lcobj2 =[]
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('Port', (('Source', 'Destination'), 1), '1', '1'))
+    lcobj2.append(cobj2)
+    cobj2=ATOM3Connection()
+    cobj2.setValue(('Server', (('Source', 'Destination'), 0), '1', '1'))
+    lcobj2.append(cobj2)
+    self.obj50.cardinality.setValue(lcobj2)
+
+    # appearance
+    self.obj50.appearance.setValue( ('connection', self.obj50))
+    self.obj50.appearance.linkInfo=linkEditor(self,self.obj50.appearance.semObject, "connection")
+    self.obj50.appearance.linkInfo.FirstLink= stickylink()
+    self.obj50.appearance.linkInfo.FirstLink.arrow=ATOM3Boolean()
+    self.obj50.appearance.linkInfo.FirstLink.arrow.setValue((' ', 0))
+    self.obj50.appearance.linkInfo.FirstLink.arrow.config = 0
+    self.obj50.appearance.linkInfo.FirstLink.arrowShape1=ATOM3Integer(0)
+    self.obj50.appearance.linkInfo.FirstLink.arrowShape2=ATOM3Integer(0)
+    self.obj50.appearance.linkInfo.FirstLink.arrowShape3=ATOM3Integer(0)
+    self.obj50.appearance.linkInfo.FirstLink.decoration=ATOM3Appearance()
+    self.obj50.appearance.linkInfo.FirstLink.decoration.setValue( ('connection_1stLink', self.obj50.appearance.linkInfo.FirstLink))
+    self.obj50.appearance.linkInfo.FirstSegment= widthXfillXdecoration()
+    self.obj50.appearance.linkInfo.FirstSegment.width=ATOM3Integer(2)
+    self.obj50.appearance.linkInfo.FirstSegment.fill=ATOM3String('blue')
+    self.obj50.appearance.linkInfo.FirstSegment.stipple=ATOM3String('')
+    self.obj50.appearance.linkInfo.FirstSegment.arrow=ATOM3Boolean()
+    self.obj50.appearance.linkInfo.FirstSegment.arrow.setValue((' ', 0))
+    self.obj50.appearance.linkInfo.FirstSegment.arrow.config = 0
+    self.obj50.appearance.linkInfo.FirstSegment.arrowShape1=ATOM3Integer(0)
+    self.obj50.appearance.linkInfo.FirstSegment.arrowShape2=ATOM3Integer(0)
+    self.obj50.appearance.linkInfo.FirstSegment.arrowShape3=ATOM3Integer(0)
+    self.obj50.appearance.linkInfo.FirstSegment.decoration=ATOM3Appearance()
+    self.obj50.appearance.linkInfo.FirstSegment.decoration.setValue( ('connection_1stSegment', self.obj50.appearance.linkInfo.FirstSegment))
+    self.obj50.appearance.linkInfo.FirstSegment.decoration_Position=ATOM3Enum(['Up', 'Down', 'Middle', 'No decoration'],3,0)
+    self.obj50.appearance.linkInfo.Center=ATOM3Appearance()
+    self.obj50.appearance.linkInfo.Center.setValue( ('connection_Center', self.obj50.appearance.linkInfo))
+    self.obj50.appearance.linkInfo.SecondSegment= widthXfillXdecoration()
+    self.obj50.appearance.linkInfo.SecondSegment.width=ATOM3Integer(2)
+    self.obj50.appearance.linkInfo.SecondSegment.fill=ATOM3String('blue')
+    self.obj50.appearance.linkInfo.SecondSegment.stipple=ATOM3String('')
+    self.obj50.appearance.linkInfo.SecondSegment.arrow=ATOM3Boolean()
+    self.obj50.appearance.linkInfo.SecondSegment.arrow.setValue((' ', 0))
+    self.obj50.appearance.linkInfo.SecondSegment.arrow.config = 0
+    self.obj50.appearance.linkInfo.SecondSegment.arrowShape1=ATOM3Integer(0)
+    self.obj50.appearance.linkInfo.SecondSegment.arrowShape2=ATOM3Integer(0)
+    self.obj50.appearance.linkInfo.SecondSegment.arrowShape3=ATOM3Integer(0)
+    self.obj50.appearance.linkInfo.SecondSegment.decoration=ATOM3Appearance()
+    self.obj50.appearance.linkInfo.SecondSegment.decoration.setValue( ('connection_2ndSegment', self.obj50.appearance.linkInfo.SecondSegment))
+    self.obj50.appearance.linkInfo.SecondSegment.decoration_Position=ATOM3Enum(['Up', 'Down', 'Middle', 'No decoration'],3,0)
+    self.obj50.appearance.linkInfo.SecondLink= stickylink()
+    self.obj50.appearance.linkInfo.SecondLink.arrow=ATOM3Boolean()
+    self.obj50.appearance.linkInfo.SecondLink.arrow.setValue((' ', 0))
+    self.obj50.appearance.linkInfo.SecondLink.arrow.config = 0
+    self.obj50.appearance.linkInfo.SecondLink.arrowShape1=ATOM3Integer(0)
+    self.obj50.appearance.linkInfo.SecondLink.arrowShape2=ATOM3Integer(0)
+    self.obj50.appearance.linkInfo.SecondLink.arrowShape3=ATOM3Integer(0)
+    self.obj50.appearance.linkInfo.SecondLink.decoration=ATOM3Appearance()
+    self.obj50.appearance.linkInfo.SecondLink.decoration.setValue( ('connection_2ndLink', self.obj50.appearance.linkInfo.SecondLink))
+    self.obj50.appearance.linkInfo.FirstLink.decoration.semObject=self.obj50.appearance.semObject
+    self.obj50.appearance.linkInfo.FirstSegment.decoration.semObject=self.obj50.appearance.semObject
+    self.obj50.appearance.linkInfo.Center.semObject=self.obj50.appearance.semObject
+    self.obj50.appearance.linkInfo.SecondSegment.decoration.semObject=self.obj50.appearance.semObject
+    self.obj50.appearance.linkInfo.SecondLink.decoration.semObject=self.obj50.appearance.semObject
+
+    # name
+    self.obj50.name.setValue('connection')
+
+    # constraints
+    self.obj50.constraints.setActionFlags([ 1, 1, 1, 0])
+    lcobj2 =[]
+    self.obj50.constraints.setValue(lcobj2)
+
+    self.obj50.graphClass_= graph_ERrelationship
+    if self.genGraphics:
+       new_obj = graph_ERrelationship(1100.0,200.0,self.obj50)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("ERrelationship", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.0, 1.0]
+    else: new_obj = None
+    self.obj50.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj50)
+    self.globalAndLocalPostcondition(self.obj50, rootNode)
+
+
+    ## Gen connections at Thu Jul 07 14:40:48 2005
+    # Connections for Obj0 of type Class3
+    self.drawConnections((self.obj24,self.obj30,[141.0, 313.0, 141.0, 400.12],"bezier", 2), (self.obj24,self.obj31,[221.0, 31.049180327868836, 400.0, 0.0, 440.0, 160.0, 440.0, 200.0, 440.0, 262.0, 440.0, 400.0, 400.0, 402.0],"bezier", 7), (self.obj24,self.obj32,[256.0, 222.3729508196721, 620.0, 220.0, 706.27199999999971, 242.0, 700.0, 202.0],"bezier", 4) )
+    # Connections for Obj1 of type Class3
+    self.drawConnections((self.obj25,self.obj32,[876.0, 424.11475409836061, 880.0, 180.0, 880.0, 302.0, 700.0, 180.0],"bezier", 4) )
+    # Connections for Obj2 of type Class3
+    self.drawConnections((self.obj26,self.obj31,[233.16921600000001, 586.08196721311469, 400.0, 482.0, 400.0, 542.0, 400.0, 402.0],"bezier", 4) )
+    # Connections for Obj3 of type Class3
+    self.drawConnections((self.obj27,self.obj32,[676.0, 445.80327868852453, 688.72799999999995, 220.0, 700.0, 180.0],"bezier", 3) )
+    # Connections for Obj4 of type Class3
+    self.drawConnections((self.obj28,self.obj33,[470.57350400000001, 744.0, 613.59118487199999, 746.46617983600004],"bezier", 2) )
+    # Connections for Obj5 of type Class3
+    self.drawConnections( )
+    # Connections for Obj6 of type Association3
+    self.drawConnections((self.obj30,self.obj26,[141.0, 400.12, 158.16921600000001, 524.11475409836066],"bezier", 2) )
+    # Connections for Obj8 of type Association3
+    self.drawConnections((self.obj31,self.obj24,[400.0, 402.0, 400.0, 262.0, 400.0, 302.0, 256.0, 272.72131147540983],"bezier", 4), (self.obj31,self.obj27,[400.0, 402.0, 620.0, 367.96018656224271, 636.0, 445.80327868852453],"bezier", 3), (self.obj31,self.obj25,[400.0, 402.0, 840.0, 347.85388557840542, 836.0, 424.11475409836061],"bezier", 3) )
+    # Connections for Obj10 of type Association3
+    self.drawConnections((self.obj32,self.obj25,[700.0, 180.0, 840.0, 202.0, 836.0, 424.11475409836061],"bezier", 3), (self.obj32,self.obj24,[700.0, 202.0, 500.0, 215.0, 256.0, 222.3729508196721],"bezier", 3), (self.obj32,self.obj27,[700.0, 180.0, 620.0, 202.0, 636.0, 445.80327868852453],"bezier", 3) )
+    # Connections for Obj12 of type Association3
+    self.drawConnections((self.obj33,self.obj29,[613.59118487199999, 746.46617983600004, 781.0, 746.81815542300001],"bezier", 2) )
+    # Connections for Obj19 of type ERentity
+    self.drawConnections((self.obj45,self.obj50,[1085.0, 147.80000000000001, 1100.0, 200.0], 0, 2) )
+    # Connections for Obj20 of type ERentity
+    self.drawConnections( )
+    # Connections for Obj27 of type ERrelationship
+    self.drawConnections((self.obj50,self.obj46,[1100.0, 200.0, 1102.5999999999999, 294.19999999999999], 0, 2) )
+
+newfunction = DCharts_ER_mdl_ER_MDL
+
+loadedMMName = ['ClassDiagramsV3_META', 'EntityRelationship']
+
+atom3version = '0.3'

@@ -1,0 +1,74 @@
+
+Value of objective function: 91.71
+
+Actual values of the variables:
+x1                   0
+x2                   300
+x3                   0
+x4                   325
+x5                   0
+x6                   275
+x7                   91.71
+x8                   1
+x9                   0
+x10                  0
+x11                  0
+x12                  0
+x13                  0
+x14                  0
+x15                  0.666667
+x16                  0.333333
+x17                  0
+x18                  1
+x19                  0
+x20                  0
+x21                  0
+x22                  0
+x23                  0
+x24                  0
+x25                  0.583333
+x26                  0.416667
+x27                  0
+x28                  1
+x29                  0
+x30                  0
+x31                  0
+x32                  0
+x33                  0
+x34                  0
+x35                  0.75
+x36                  0.25
+x37                  0
+x38                  0
+x39                  27.54
+x40                  0
+x41                  42.75
+x42                  0
+x43                  21.42
+__AntiBodyOf(7)__    0
+
+Actual values of the constraints:
+c1                   300
+c2                   600
+c3                   325
+c4                   300
+c5                   275
+c6                   0
+c7                   0
+c8                   0
+c9                   0
+c10                  0
+c11                  0
+c12                  0
+c13                  0
+c14                  0
+c15                  0
+c16                  0
+c17                  0
+c18                  1
+c19                  1
+c20                  1
+c21                  1
+c22                  1
+c23                  1
+c24                  0

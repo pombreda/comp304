@@ -1,0 +1,1 @@
+rm -f *.a *.o TAGS lex.c lp.c demo lp_solve lp2mps mps2lp .pure .softdebughist datafile

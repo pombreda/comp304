@@ -1,0 +1,322 @@
+"""
+__DCharts_META.py_____________________________________________________
+
+Automatically generated AToM3 Model File (Do not modify directly)
+Author: Denis Dube
+Modified: Wed Mar 30 20:12:17 2005
+______________________________________________________________________
+"""
+from stickylink import *
+from widthXfillXdecoration import *
+from ButtonConfig import *
+from graph_ButtonConfig import *
+from ATOM3Enum import *
+from ATOM3String import *
+from ATOM3BottomType import *
+from ATOM3Constraint import *
+from ATOM3Attribute import *
+from ATOM3Float import *
+from ATOM3List import *
+from ATOM3Link import *
+from ATOM3Connection import *
+from ATOM3Boolean import *
+from ATOM3Appearance import *
+from ATOM3Text import *
+from ATOM3Action import *
+from ATOM3Integer import *
+from ATOM3Port import *
+from ATOM3MSEnum import *
+
+def DCharts_META(self, rootNode, ButtonsRootNode=None):
+
+    # --- Generating attributes code for ASG Buttons ---
+    if( ButtonsRootNode ): 
+        # RowSize
+        ButtonsRootNode.RowSize.setValue(1)
+
+        # Formalism_File
+        ButtonsRootNode.Formalism_File.setValue('DCharts/DCharts_MM.py')
+
+        # Formalism_Name
+        ButtonsRootNode.Formalism_Name.setValue('DCharts')
+    # --- ASG attributes over ---
+
+
+    self.obj265=ButtonConfig(self)
+    self.obj265.isGraphObjectVisual = True
+
+
+    # Action
+    self.obj265.Action.setValue(('ActionButton1', (['Python', 'OCL'], 1), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# This method has as parameters:\n#   - wherex : X Position in window coordinates where the user clicked.\n#   - wherey : Y Position in window coordinates where the user clicked.\nnewPlace = self.createNewBasic (self, wherex, wherey)\n'))
+
+    # Drawing_Mode
+    self.obj265.Drawing_Mode.setValue((' ', 1))
+    self.obj265.Drawing_Mode.config = 0
+
+    # Contents
+    self.obj265.Contents.Text.setValue('New Basic')
+    self.obj265.Contents.Image.setValue('DCharts/Basic.gif')
+    self.obj265.Contents.lastSelected= "Image"
+
+    self.obj265.graphClass_= graph_ButtonConfig
+    if self.genGraphics:
+       new_obj = graph_ButtonConfig(41.0,34.0,self.obj265)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("ButtonConfig", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.9800000000000009, 0.94999999999999996]
+    else: new_obj = None
+    self.obj265.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj265)
+    self.globalAndLocalPostcondition(self.obj265, rootNode)
+
+    self.obj266=ButtonConfig(self)
+    self.obj266.isGraphObjectVisual = True
+
+
+    # Action
+    self.obj266.Action.setValue(('ActionButton1', (['Python', 'OCL'], 1), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# This method has as parameters:\n#   - wherex : X Position in window coordinates where the user clicked.\n#   - wherey : Y Position in window coordinates where the user clicked.\nnewPlace = self.createNewHistory (self, wherex, wherey)\n'))
+
+    # Drawing_Mode
+    self.obj266.Drawing_Mode.setValue((' ', 1))
+    self.obj266.Drawing_Mode.config = 0
+
+    # Contents
+    self.obj266.Contents.Text.setValue('New History')
+    self.obj266.Contents.Image.setValue('DCharts/History.gif')
+    self.obj266.Contents.lastSelected= "Image"
+
+    self.obj266.graphClass_= graph_ButtonConfig
+    if self.genGraphics:
+       new_obj = graph_ButtonConfig(281.0,36.0,self.obj266)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("ButtonConfig", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.9800000000000009, 0.94999999999999996]
+    else: new_obj = None
+    self.obj266.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj266)
+    self.globalAndLocalPostcondition(self.obj266, rootNode)
+
+    self.obj267=ButtonConfig(self)
+    self.obj267.isGraphObjectVisual = True
+
+
+    # Action
+    self.obj267.Action.setValue(('ActionButton1', (['Python', 'OCL'], 1), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# This method has as parameters:\n#   - wherex : X Position in window coordinates where the user clicked.\n#   - wherey : Y Position in window coordinates where the user clicked.\nnewPlace = self.createNewComposite (self, wherex, wherey)\n'))
+
+    # Drawing_Mode
+    self.obj267.Drawing_Mode.setValue((' ', 1))
+    self.obj267.Drawing_Mode.config = 0
+
+    # Contents
+    self.obj267.Contents.Text.setValue('New Composite')
+    self.obj267.Contents.Image.setValue('DCharts/Composite.gif')
+    self.obj267.Contents.lastSelected= "Image"
+
+    self.obj267.graphClass_= graph_ButtonConfig
+    if self.genGraphics:
+       new_obj = graph_ButtonConfig(40.0,122.0,self.obj267)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("ButtonConfig", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.9800000000000009, 0.94999999999999996]
+    else: new_obj = None
+    self.obj267.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj267)
+    self.globalAndLocalPostcondition(self.obj267, rootNode)
+
+    self.obj268=ButtonConfig(self)
+    self.obj268.isGraphObjectVisual = True
+
+
+    # Action
+    self.obj268.Action.setValue(('ActionButton1', (['Python', 'OCL'], 1), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# This method has as parameters:\n#   - wherex : X Position in window coordinates where the user clicked.\n#   - wherey : Y Position in window coordinates where the user clicked.\nnewPlace = self.createNewOrthogonal (self, wherex, wherey)\n'))
+
+    # Drawing_Mode
+    self.obj268.Drawing_Mode.setValue((' ', 1))
+    self.obj268.Drawing_Mode.config = 0
+
+    # Contents
+    self.obj268.Contents.Text.setValue('New Orthogonal')
+    self.obj268.Contents.Image.setValue('DCharts/Orthogonal.gif')
+    self.obj268.Contents.lastSelected= "Image"
+
+    self.obj268.graphClass_= graph_ButtonConfig
+    if self.genGraphics:
+       new_obj = graph_ButtonConfig(280.0,120.0,self.obj268)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("ButtonConfig", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.9800000000000009, 0.94999999999999996]
+    else: new_obj = None
+    self.obj268.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj268)
+    self.globalAndLocalPostcondition(self.obj268, rootNode)
+
+    self.obj269=ButtonConfig(self)
+    self.obj269.isGraphObjectVisual = True
+
+
+    # Action
+    self.obj269.Action.setValue(('ActionButton1', (['Python', 'OCL'], 1), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# This method has as parameters:\n#   - wherex : X Position in window coordinates where the user clicked.\n#   - wherey : Y Position in window coordinates where the user clicked.\nnewPlace = self.createNewPort (self, wherex, wherey)\n'))
+
+    # Drawing_Mode
+    self.obj269.Drawing_Mode.setValue((' ', 1))
+    self.obj269.Drawing_Mode.config = 0
+
+    # Contents
+    self.obj269.Contents.Text.setValue('New Port')
+    self.obj269.Contents.Image.setValue('DCharts/Port.gif')
+    self.obj269.Contents.lastSelected= "Image"
+
+    self.obj269.graphClass_= graph_ButtonConfig
+    if self.genGraphics:
+       new_obj = graph_ButtonConfig(39.0,197.0,self.obj269)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("ButtonConfig", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.9800000000000009, 0.94999999999999996]
+    else: new_obj = None
+    self.obj269.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj269)
+    self.globalAndLocalPostcondition(self.obj269, rootNode)
+
+    self.obj270=ButtonConfig(self)
+    self.obj270.isGraphObjectVisual = True
+
+
+    # Action
+    self.obj270.Action.setValue(('ActionButton1', (['Python', 'OCL'], 1), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# This method has as parameters:\n#   - wherex : X Position in window coordinates where the user clicked.\n#   - wherey : Y Position in window coordinates where the user clicked.\nnewPlace = self.createNewServer (self, wherex, wherey)\n'))
+
+    # Drawing_Mode
+    self.obj270.Drawing_Mode.setValue((' ', 1))
+    self.obj270.Drawing_Mode.config = 0
+
+    # Contents
+    self.obj270.Contents.Text.setValue('New Server')
+    self.obj270.Contents.Image.setValue('DCharts/Server.gif')
+    self.obj270.Contents.lastSelected= "Image"
+
+    self.obj270.graphClass_= graph_ButtonConfig
+    if self.genGraphics:
+       new_obj = graph_ButtonConfig(280.0,198.0,self.obj270)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("ButtonConfig", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.9800000000000009, 0.94999999999999996]
+    else: new_obj = None
+    self.obj270.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj270)
+    self.globalAndLocalPostcondition(self.obj270, rootNode)
+
+    self.obj271=ButtonConfig(self)
+    self.obj271.isGraphObjectVisual = True
+
+
+    # Action
+    self.obj271.Action.setValue(('ActionButton1', (['Python', 'OCL'], 1), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# This method has as parameters:\n#   - wherex : X Position in window coordinates where the user clicked.\n#   - wherey : Y Position in window coordinates where the user clicked.\nnewPlace = self.createNewvisual_settings (self, wherex, wherey)\n'))
+
+    # Drawing_Mode
+    self.obj271.Drawing_Mode.setValue((' ', 1))
+    self.obj271.Drawing_Mode.config = 0
+
+    # Contents
+    self.obj271.Contents.Text.setValue('New visual_settings')
+    self.obj271.Contents.Image.setValue('DCharts/VisualSettings.gif')
+    self.obj271.Contents.lastSelected= "Image"
+
+    self.obj271.graphClass_= graph_ButtonConfig
+    if self.genGraphics:
+       new_obj = graph_ButtonConfig(38.0,332.0,self.obj271)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("ButtonConfig", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.9800000000000009, 0.94999999999999996]
+    else: new_obj = None
+    self.obj271.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj271)
+    self.globalAndLocalPostcondition(self.obj271, rootNode)
+
+    self.obj272=ButtonConfig(self)
+    self.obj272.isGraphObjectVisual = True
+
+
+    # Action
+    self.obj272.Action.setValue(('Action', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# The parameters of this method are:\n#   - wherex\n#   - wherey\n\nimport SVMAToM3Plugin\nSVMAToM3Plugin.simulate(self)\n'))
+
+    # Drawing_Mode
+    self.obj272.Drawing_Mode.setValue((' ', 0))
+    self.obj272.Drawing_Mode.config = 0
+
+    # Contents
+    self.obj272.Contents.Text.setValue('simulate in SVM')
+    self.obj272.Contents.Image.setValue('')
+    self.obj272.Contents.Image.setNone()
+    self.obj272.Contents.lastSelected= "Text"
+
+    self.obj272.graphClass_= graph_ButtonConfig
+    if self.genGraphics:
+       new_obj = graph_ButtonConfig(38.0,265.0,self.obj272)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("ButtonConfig", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.9800000000000009, 0.94999999999999996]
+    else: new_obj = None
+    self.obj272.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj272)
+    self.globalAndLocalPostcondition(self.obj272, rootNode)
+
+    self.obj273=ButtonConfig(self)
+    self.obj273.isGraphObjectVisual = True
+
+
+    # Action
+    self.obj273.Action.setValue(('Action', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# The parameters of this method are:\n#   - wherex\n#   - wherey\n\nimport SVMAToM3Plugin\nimport sys, os, string, tkFileDialog\n\nsc = SVMAToM3Plugin.generate_description(self, savetofile=None)\ndesc = sc["desc"]\n\nmname=self.statusbar.getState(self.statusbar.MODEL)[1][0]\nif not mname or mname=="Nonamed":\n    mname=tkFileDialog.asksaveasfilename(\n                        filetypes=[("SVM descriptions", "*.des")],\n                        initialdir=self.initialDirectoryDict[ \'OpenSaveModel\' ])\nelse:\n    if( string.split( mname, \'.\' )[1] == \'py\' ): \n        mname=mname[:-2]+"des"\n    mname=os.path.split(mname)[1]\n    mname=tkFileDialog.asksaveasfilename(initialfile=mname, \n                    filetypes=[("SVM descriptions", "*.des")], \n                    initialdir=self.initialDirectoryDict[ \'OpenSaveModel\' ])\n\n# User cancelled\nif( not mname ): return\n\n# Force naming convention\nif( mname[-4:] != \'.des\' ): mname = mname + \'.des\'\n\nif( os.path.exists( mname ) ): os.remove( mname )\n\n# Save .des file\nmf=open(mname, "w")\nmf.write(desc)\nmf.close()\n# Print on success\nprint "SVM description saved to: " + mname\n\n\n\n'))
+
+    # Drawing_Mode
+    self.obj273.Drawing_Mode.setValue((' ', 0))
+    self.obj273.Drawing_Mode.config = 0
+
+    # Contents
+    self.obj273.Contents.Text.setValue('generate .des')
+    self.obj273.Contents.Image.setValue('')
+    self.obj273.Contents.Image.setNone()
+    self.obj273.Contents.lastSelected= "Text"
+
+    self.obj273.graphClass_= graph_ButtonConfig
+    if self.genGraphics:
+       new_obj = graph_ButtonConfig(280.0,267.0,self.obj273)
+       new_obj.DrawObject(self.UMLmodel)
+       self.UMLmodel.addtag_withtag("ButtonConfig", new_obj.tag)
+       new_obj.layConstraints = dict() # Graphical Layout Constraints 
+       new_obj.layConstraints['scale'] = [1.9800000000000009, 0.94999999999999996]
+    else: new_obj = None
+    self.obj273.graphObject_ = new_obj
+
+    # Add node to the root: rootNode
+    rootNode.addNode(self.obj273)
+    self.globalAndLocalPostcondition(self.obj273, rootNode)
+    self.drawConnections( )
+
+newfunction = DCharts_META
+
+loadedMMName = 'Buttons'
+
+atom3version = '0.3'
