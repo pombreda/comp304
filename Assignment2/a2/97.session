@@ -1,0 +1,18 @@
+window_sizes 1350 787 337 1007 602 133
+windows_style
+diagrams
+  active  classdiagram_ref 128225 // diagram
+    842 704 80 4 276 0
+end
+show_stereotypes
+selected deploymentview_ref 141153 // InventorySystem
+open
+  class_ref 128225 // Location
+  class_ref 128353 // Equipment
+  class_ref 128481 // Purchase
+  class_ref 128609 // Coordinate
+  class_ref 135137 // Main
+  deploymentview_ref 141153 // InventorySystem
+end
+end
+verbose

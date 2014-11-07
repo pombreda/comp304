@@ -1,0 +1,9 @@
+window_sizes 1350 787 337 1007 597 133
+show_stereotypes
+selected classview_ref 134625 // modelView
+open
+  
+  package_ref 134625 // model
+end
+end
+verbose

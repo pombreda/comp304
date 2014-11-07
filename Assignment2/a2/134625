@@ -1,0 +1,1839 @@
+format 71
+"model" // model
+  revision 16
+  modified_by 97 "Chris"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default show_stereotype_properties default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default show_stereotype_properties default
+  
+  classview 128097 "classes"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    associated_deployment_view deploymentview_ref 141153 // InventorySystem
+    class 128097 "Employee"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "An employee, which can have equipment, and works at a location"
+      attribute 128097 "name"
+	private explicit_type "string"
+	multiplicity "1"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = _name
+"
+	idl_decl ""
+	get_oper operation_ref 134881 // getName
+	comment "The employee's name"
+      end
+
+      attribute 128225 "gender"
+	private explicit_type "bool"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = _gender
+"
+	idl_decl ""
+	get_oper operation_ref 134753 // getGender
+	comment "The employee's gender where male is true, female is false"
+      end
+
+      attribute 128353 "title"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	get_oper operation_ref 135009 // getTitle
+	set_oper operation_ref 135137 // setTitle
+	comment "Employee's job title"
+      end
+
+      attribute 128481 "department"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	get_oper operation_ref 135265 // getDepartment
+	set_oper operation_ref 135393 // setDepartment
+	comment "Department the employee works for"
+      end
+
+      attribute 129121 "previousEquipment"
+	private explicit_type "Map"
+	init_value "dict()"
+	stereotype "map"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	get_oper operation_ref 135521 // getPreviousEquipment
+	comment "A dictionary of equipment bar codes to time.time objects holding a history of previous assignments to the employee"
+      end
+
+      classrelation 129377 // equipment (is assigned)
+	relation 128865 ---- name "is assigned"
+	  stereotype "list"
+	  a role_name "equipment" multiplicity "*" private
+	    comment "The employee that this equipment is assigned to"
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 129377 // equipment (is assigned)
+	  b role_name "assignee" multiplicity "0..1" private
+	    comment "Equipment assigned to the employee, specifically, equipment that satisfy getAssignee() == this employee"
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 129505 // assignee (is assigned)
+	get_oper operation_ref 145889 // getEquipment
+	set_oper operation_ref 146017 // setEquipment
+      end
+
+      classrelation 130145 // works at
+	relation_ref 129249 // works at
+	get_oper operation_ref 146145 // getLocation
+	set_oper operation_ref 146273 // setLocation
+      end
+
+      classrelation 130273 // supervisor (is supervised by)
+	relation 129377 ---> name "is supervised by"
+	  a role_name "supervisor" multiplicity "1" private
+	    comment "The supervising employee of this employee"
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 130273 // supervisor (is supervised by)
+	  b multiplicity "1..*" parent class_ref 128097 // Employee
+	get_oper operation_ref 207585 // getSupervisor
+	set_oper operation_ref 207713 // setSupervisor
+      end
+
+      operation 134753 "getGender"
+	force_body_gen const cpp_inline public explicit_return_type "bool"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.gender
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 128225 // gender
+	comment "Determine if the employee is male (true) or female (false)"
+      end
+
+      operation 134881 "getName"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.name
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 128097 // name
+	comment "Get the employee's name"
+      end
+
+      operation 135009 "getTitle"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.title
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 128353 // title
+	comment "Get the title of the employee"
+      end
+
+      operation 135137 "setTitle"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	
+	java_name_spec "set${Name}"
+	
+	php_name_spec "set${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self, ${p0}${)}:
+${docstring}self.title = ${p0}
+"
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 128353 // title
+	comment "Set the title of the employee"
+      end
+
+      operation 135265 "getDepartment"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.department
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 128481 // department
+	comment "Get the department of the employee"
+      end
+
+      operation 135393 "setDepartment"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	
+	java_name_spec "set${Name}"
+	
+	php_name_spec "set${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self, ${p0}${)}:
+${docstring}self.department = ${p0}
+"
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 128481 // department
+	comment "Set the department of the employee"
+      end
+
+      operation 135521 "getPreviousEquipment"
+	stereotype "map"
+	force_body_gen const cpp_inline public explicit_return_type "Map"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}prevList = list()
+for key in previousEquipment:
+	prevList.append((key, previousEquipment[key]))
+return tuple(prevList)
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 129121 // previousEquipment
+	comment "Get all the previous equipment owned by this employee, in the form of tuples containing the equipment bar code and the time.time of the equipment's removal from the employee"
+      end
+
+      classrelation 150241 // coordinates (can be found at)
+	relation 149345 ---> name "can be found at"
+	  a role_name "coordinates" multiplicity "1" private
+	    comment "Contact informatino for an employee"
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 150241 // coordinates (can be found at)
+	  b multiplicity "1" parent class_ref 128609 // Coordinate
+	get_oper operation_ref 145633 // getCoordinates
+	set_oper operation_ref 145761 // setCoordinates
+      end
+
+      operation 145633 "getCoordinates"
+	force_body_gen const cpp_inline public return_type class_ref 128609 // Coordinate
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}const ${type} * ${name}${(}${)}${const}${volatile}${throw};
+"
+	cpp_def "${comment}${inline}const ${type} * ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  return coordinates;
+}
+"
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.coordinates
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_relation classrelation_ref 150241 // coordinates (can be found at)
+	comment "Get the employee's contact information"
+      end
+
+      operation 145761 "setCoordinates"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" type class_ref 128609 // Coordinate
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} * ${p0}${)}${const}${volatile}${throw};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${t0} * ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  coordinates = ${p0};
+}
+"
+	cpp_name_spec "set_${name}"
+	
+	java_name_spec "set${Name}"
+	
+	php_name_spec "set${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self, ${p0}${)}:
+${docstring}self.coordinates = ${p0}
+"
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_relation classrelation_ref 150241 // coordinates (can be found at)
+	comment "Set the employee's contact information"
+      end
+
+      operation 145889 "getEquipment"
+	stereotype "list"
+	force_body_gen const cpp_inline public return_type class_ref 128353 // Equipment
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return tuple(self.equipment)
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_relation classrelation_ref 129377 // equipment (is assigned)
+	comment "Get the equipment assigned to this employee as a tuple"
+      end
+
+      operation 146017 "setEquipment"
+	stereotype "list"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" type class_ref 128353 // Equipment
+	constraint "value is an iterable"
+	
+	cpp_name_spec "set_${name}"
+	
+	java_name_spec "set${Name}"
+	
+	php_name_spec "set${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self, ${p0}${)}:
+${docstring}for lostEquipment in (set(self.equipment) - set(${p0})):
+	self.previousEquipment[selfEquipment] = time.time()
+self.equipment = ${p0}
+"
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_relation classrelation_ref 129377 // equipment (is assigned)
+	comment "Set the eqipment assigned to this employee"
+      end
+
+      operation 146145 "getLocation"
+	stereotype "list"
+	force_body_gen const cpp_inline public return_type class_ref 128225 // Location
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.location
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_relation classrelation_ref 130145 // works at
+      end
+
+      operation 146273 "setLocation"
+	stereotype "list"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" type class_ref 128225 // Location
+	
+	cpp_name_spec "set_${name}"
+	
+	java_name_spec "set${Name}"
+	
+	php_name_spec "set${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self, ${p0}${)}:
+${docstring}self.location = ${p0}
+"
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_relation classrelation_ref 130145 // works at
+      end
+
+      operation 146401 "hasEquipment"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "_equipment" explicit_type ""
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}self, _equipment${)}:
+${docstring}return _equipment in set(self.equipment)
+"
+	
+      end
+
+      operation 146529 "hadEquipment"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "_equipment" explicit_type ""
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}self, _equipment${)}:
+${docstring}return _equipment.getBarCode() in self.previousEquipment
+"
+	
+      end
+
+      operation 146657 "addEquipment"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "_addEquipment" explicit_type ""
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}self, _equipment${)}:
+${docstring}if (not self.hasEquipment(_equipment)):
+	self.equipment.append(_equipment)
+	_equipment.setAssignee(self)
+	_equipment.setLocation(self.location)
+"
+	
+      end
+
+      operation 146785 "removeEquipment"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "_equipment" explicit_type ""
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}self, _equipment${)}:
+${docstring}if (self.hasEquipment(_equipment)):
+	self.equipment.remove(_equipment)
+	self.previousEquipment[_equipment.getBarCode()] = time.time()
+	_equipment.setAssignee(None)
+"
+	
+      end
+
+      operation 167777 "prettyPrint"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}print \"*** Employee ***\"
+print \"Name:\",self.name
+print \"Male?:\",self.gender
+print \"Title:\",self.title
+print \"Department:\",self.department
+print \"Supervisor:\",self.supervisor.getName()
+print \"Location:\",self.location.getName()
+print \"Coordinates:\",self.coordinates.prettyPrint()
+print \"Equipment History: Bar Code : Date\"
+for key in self.previousEquipment:
+	print key,\":\",time.asctime(time.localtime(self.previousEquipment[key]))
+print \"Equipment:\"
+for e in self.equipment:
+	print e.prettyPrint()
+"
+	
+      end
+
+      operation 201057 "__init__"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "self" explicit_type ""
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, _name, _gender${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 207585 "getSupervisor"
+	force_body_gen const cpp_inline public return_type class_ref 128097 // Employee
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.supervisor
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_relation classrelation_ref 130273 // supervisor (is supervised by)
+      end
+
+      operation 207713 "setSupervisor"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" type class_ref 128097 // Employee
+	
+	cpp_name_spec "set_${name}"
+	
+	java_name_spec "set${Name}"
+	
+	php_name_spec "set${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self, ${p0}${)}:
+${docstring}self.supervisor = ${p0}
+"
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_relation classrelation_ref 130273 // supervisor (is supervised by)
+      end
+    end
+
+    class 128225 "Location"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 135649 "name"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	get_oper operation_ref 135777 // getName
+	set_oper operation_ref 135905 // setName
+      end
+
+      attribute 135777 "officeCount"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	get_oper operation_ref 136033 // getOfficeCount
+	set_oper operation_ref 136161 // setOfficeCount
+      end
+
+      attribute 144481 "maintenanceEmployee"
+	private type class_ref 128097 // Employee
+	multiplicity "1"
+	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	get_oper operation_ref 154081 // getMaintenanceEmployee
+	set_oper operation_ref 154209 // setMaintenanceEmployee
+	comment "The Employee who maintains this Location"
+      end
+
+      operation 154081 "getMaintenanceEmployee"
+	force_body_gen const cpp_inline public return_type class_ref 128097 // Employee
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}const ${type} ${name}${(}${)}${const}${volatile}${throw};
+"
+	cpp_def "${comment}${inline}const ${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  return maintenanceEmployee;
+}
+"
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.maintenanceEmployee
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 144481 // maintenanceEmployee
+      end
+
+      operation 154209 "setMaintenanceEmployee"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" type class_ref 128097 // Employee
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${)}${const}${volatile}${throw};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  maintenanceEmployee = ${p0};
+}
+"
+	cpp_name_spec "set_${name}"
+	
+	java_name_spec "set${Name}"
+	
+	php_name_spec "set${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self, ${p0}${)}:
+${docstring}self.maintenanceEmployee = ${p0}
+self.maintenanceCoordinates = value.getCoordinates()
+"
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 144481 // maintenanceEmployee
+      end
+
+      operation 135777 "getName"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.name
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 135649 // name
+      end
+
+      operation 135905 "setName"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	
+	java_name_spec "set${Name}"
+	
+	php_name_spec "set${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self, ${p0}${)}:
+${docstring}self.name = ${p0}
+"
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 135649 // name
+      end
+
+      operation 136033 "getOfficeCount"
+	force_body_gen const cpp_inline public explicit_return_type "int"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.officeCount
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 135777 // officeCount
+      end
+
+      operation 136161 "setOfficeCount"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "int"
+	
+	cpp_name_spec "set_${name}"
+	
+	java_name_spec "set${Name}"
+	
+	php_name_spec "set${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self, ${p0}${)}:
+${docstring}self.officeCount = ${p0}
+"
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 135777 // officeCount
+      end
+
+      classrelation 149985 // maintenanceCoordinates (maintaned from)
+	relation 149089 ---> name "maintaned from"
+	  a role_name "maintenanceCoordinates" multiplicity "1" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 149985 // maintenanceCoordinates (maintaned from)
+	  b multiplicity "1" parent class_ref 128609 // Coordinate
+	get_oper operation_ref 144737 // getMaintenanceCoordinates
+      end
+
+      operation 144737 "getMaintenanceCoordinates"
+	force_body_gen const cpp_inline public return_type class_ref 128609 // Coordinate
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}const ${type} * ${name}${(}${)}${const}${volatile}${throw};
+"
+	cpp_def "${comment}${inline}const ${type} * ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  return maintenanceCoordinates;
+}
+"
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.maintenanceCoordinates
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_relation classrelation_ref 149985 // maintenanceCoordinates (maintaned from)
+      end
+
+      classrelation 130017 // employees (works at)
+	relation 129249 o--- name "works at"
+	  stereotype "list"
+	  a role_name "employees" multiplicity "1..*" private
+	    comment "A list of employees at this location"
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 130017 // employees (works at)
+	  b role_name "location" multiplicity "1" private
+	    comment "The location that satisfies hasEmployee() to be true for this employee"
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 130145 // works at
+	get_oper operation_ref 146913 // getEmployees
+	set_oper operation_ref 147041 // setEmployees
+      end
+
+      operation 146913 "getEmployees"
+	stereotype "list"
+	force_body_gen const cpp_inline public return_type class_ref 128097 // Employee
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return tuple(self.employees)
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_relation classrelation_ref 130017 // employees (works at)
+      end
+
+      operation 147041 "setEmployees"
+	stereotype "list"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" type class_ref 128097 // Employee
+	
+	cpp_name_spec "set_${name}"
+	
+	java_name_spec "set${Name}"
+	
+	php_name_spec "set${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self, ${p0}${)}:
+${docstring}self.employees = ${p0}
+for e in value:
+	e.setLocation(self)
+"
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_relation classrelation_ref 130017 // employees (works at)
+      end
+
+      operation 147169 "addEmployee"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "_employee" type class_ref 128097 // Employee
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}self, _employee${)}:
+${docstring}self.employees.append(_employee)
+_employee.setLocation(self)
+"
+	
+	comment "Add an employee to this Location"
+      end
+
+      operation 147297 "removeEmployee"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "_employee" type class_ref 128097 // Employee
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}self, _employee${)}:
+${docstring}if (hasEmployee(_employee)):
+	employees.remove(_employee)
+	_employee.setLocation(None)
+"
+	
+	comment "Remove an Employee from the Location, ignores attempts to remove employees that do not work here."
+      end
+
+      operation 147425 "hasEmployee"
+	public explicit_return_type "bool"
+	nparams 1
+	  param in name "_employee" type class_ref 128097 // Employee
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}self, _employee${)}:
+${docstring}return _employee in set(self.employees)
+"
+	
+	comment "Check if an employee works at this Location"
+      end
+
+      classrelation 150625 // equipment (<aggregation>)
+	relation 149601 o---
+	  stereotype "list"
+	  a role_name "equipment" multiplicity "*" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    python "${comment}${self}${name} = list()
+"
+	    classrelation_ref 150625 // equipment (<aggregation>)
+	  b role_name "location" multiplicity "1" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 150753 // location (<aggregation>)
+	get_oper operation_ref 160737 // getEquipment
+	set_oper operation_ref 160865 // setSquipment
+      end
+
+      operation 160737 "getEquipment"
+	stereotype "list"
+	force_body_gen const cpp_inline public return_type class_ref 128353 // Equipment
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}const ${type} * ${name}${(}${)}${const}${volatile}${throw};
+"
+	cpp_def "${comment}${inline}const ${type} * ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  return equipment;
+}
+"
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.equipment
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_relation classrelation_ref 150625 // equipment (<aggregation>)
+      end
+
+      operation 160865 "setSquipment"
+	stereotype "list"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" type class_ref 128353 // Equipment
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} * ${p0}${)}${const}${volatile}${throw};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${t0} * ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  equipment = ${p0};
+}
+"
+	cpp_name_spec "set_${name}"
+	
+	java_name_spec "set${Name}"
+	
+	php_name_spec "set${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self, ${p0}${)}:
+${docstring}self.equipment = ${p0}
+"
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_relation classrelation_ref 150625 // equipment (<aggregation>)
+      end
+
+      operation 160993 "addEquipment"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "_equipment" explicit_type ""
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}self, _equipment${)}:
+${docstring}if (not self.hasEquipment(_equipment)):
+	self.equipment.append(_equipment)
+	_equipment.setLocation(self)
+"
+	
+      end
+
+      operation 161121 "removeEquipment"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "_equipment" explicit_type ""
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}self, _equipment${)}:
+${docstring}if (self.hasEquipment(_equipment)):
+	self.equipment.remove(_equipment)
+	_equipment.setLocation(None)
+"
+	
+      end
+
+      operation 161249 "hasEquipment"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "_equipment" explicit_type ""
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}self, _equipment${)}:
+${docstring}return _equipment in set(self.equipment)
+"
+	
+      end
+
+      operation 180961 "prettyPrint"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}print \"*** Location ***\"
+print \"Name:\",self.name
+print \"Office Count:\",self.officeCount
+print \"Maintenance Employee:\",self.maintenanceEmployee.prettyPrint()
+print \"Maintenance Coordinates:\",self.getMaintenanceCoordinates().prettyPrint()
+print \"Employees:\"
+for e in self.employees:
+	e.prettyPrint()
+print \"Equipment:\"
+for e in self.equipment:
+	e.prettyPrint()
+"
+	
+      end
+    end
+
+    class 128353 "Equipment"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 136417 "type"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = _type
+"
+	idl_decl ""
+	get_oper operation_ref 136289 // getType
+      end
+
+      attribute 136545 "serialNumber"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = _serialNumber
+"
+	idl_decl ""
+	get_oper operation_ref 136417 // getSerialNumber
+      end
+
+      attribute 136673 "modelNumber"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = _modelNumber
+"
+	idl_decl ""
+	get_oper operation_ref 136545 // getModelNumber
+      end
+
+      attribute 137185 "barCode"
+	private explicit_type "uint"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = _barCode
+"
+	idl_decl ""
+	get_oper operation_ref 136673 // getBarCode
+      end
+
+      classrelation 129505 // assignee (is assigned)
+	relation_ref 128865 // is assigned
+	get_oper operation_ref 144993 // getAssignee
+	set_oper operation_ref 145121 // setAssignee
+      end
+
+      operation 136289 "getType"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.type
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 136417 // type
+      end
+
+      operation 136417 "getSerialNumber"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.serialNumber
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 136545 // serialNumber
+      end
+
+      operation 136545 "getModelNumber"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.modelNumber
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 136673 // modelNumber
+      end
+
+      operation 136673 "getBarCode"
+	force_body_gen const cpp_inline public explicit_return_type "uint"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.barCode
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 137185 // barCode
+      end
+
+      classrelation 150113 // purchase ()
+	relation 149217 ---> name ""
+	  a role_name "purchase" multiplicity "1" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    python "${comment}${self}${name} = _purchase
+"
+	    classrelation_ref 150113 // purchase ()
+	  b multiplicity "1" parent class_ref 128481 // Purchase
+	get_oper operation_ref 145505 // getPurchase
+      end
+
+      operation 144993 "getAssignee"
+	stereotype "list"
+	force_body_gen const cpp_inline public return_type class_ref 128097 // Employee
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.assignee
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_relation classrelation_ref 129505 // assignee (is assigned)
+      end
+
+      operation 145121 "setAssignee"
+	stereotype "list"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" type class_ref 128097 // Employee
+	
+	cpp_name_spec "set_${name}"
+	
+	java_name_spec "set${Name}"
+	
+	php_name_spec "set${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self, ${p0}${)}:
+${docstring}self.assignee = ${p0}
+"
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_relation classrelation_ref 129505 // assignee (is assigned)
+      end
+
+      operation 145505 "getPurchase"
+	force_body_gen const cpp_inline public return_type class_ref 128481 // Purchase
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}const ${type} * ${name}${(}${)}${const}${volatile}${throw};
+"
+	cpp_def "${comment}${inline}const ${type} * ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  return purchase;
+}
+"
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.purchase
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_relation classrelation_ref 150113 // purchase ()
+      end
+
+      classrelation 150753 // location (<aggregation>)
+	relation_ref 149601 // <aggregation>
+	get_oper operation_ref 174305 // getLocation
+	set_oper operation_ref 174433 // setLocation
+      end
+
+      operation 174305 "getLocation"
+	stereotype "list"
+	force_body_gen const cpp_inline public return_type class_ref 128225 // Location
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}const ${type} * ${name}${(}${)}${const}${volatile}${throw};
+"
+	cpp_def "${comment}${inline}const ${type} * ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  return location;
+}
+"
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.location
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_relation classrelation_ref 150753 // location (<aggregation>)
+      end
+
+      operation 174433 "setLocation"
+	stereotype "list"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" type class_ref 128225 // Location
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} * ${p0}${)}${const}${volatile}${throw};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${t0} * ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  location = ${p0};
+}
+"
+	cpp_name_spec "set_${name}"
+	
+	java_name_spec "set${Name}"
+	
+	php_name_spec "set${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self, ${p0}${)}:
+${docstring}self.location = ${p0}
+"
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_relation classrelation_ref 150753 // location (<aggregation>)
+      end
+
+      operation 181089 "prettyPrint"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}print \"*** Equipment ***\"
+print \"Type:\",self.type
+print \"Serial Number:\",self.serialNumber
+print \"Model Number:\",self.modelNumber
+print \"Bar Code:\",self.barCode
+print \"Assignee:\",self.assignee.getName()
+print \"Purchase:\",self.purchase.prettyPrint()
+print \"Location:\",self.location.getName()
+"
+	
+      end
+
+      operation 188001 "__init__"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "self" explicit_type ""
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, _purchase, _barCode, _type, _serialNumber, _modelNumber${)}:
+${docstring}${body}
+"
+	
+      end
+    end
+
+    classdiagram 128225 "diagram"
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    class 128481 "Purchase"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "import time
+
+class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 137313 "date"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	get_oper operation_ref 136801 // getDate
+      end
+
+      attribute 137441 "store"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	get_oper operation_ref 136929 // getStore
+      end
+
+      attribute 137569 "warranty"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	get_oper operation_ref 137057 // getWarranty
+      end
+
+      operation 136801 "getDate"
+	force_body_gen const cpp_inline public explicit_return_type "int"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.date
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 137313 // date
+      end
+
+      operation 136929 "getStore"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.store
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 137441 // store
+      end
+
+      operation 137057 "getWarranty"
+	force_body_gen const cpp_inline public explicit_return_type "int"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.warranty
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 137569 // warranty
+      end
+
+      operation 181217 "prettyPrint"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}print \"*** Purchase ***\"
+print \"Date:\",time.asctime(time.localtime(self.date))
+print \"Store:\",self.store
+print \"Warranty:\",time.asctime(time.localtime(self.warranty))
+"
+	
+      end
+
+      operation 181473 "__init__"
+	public explicit_return_type ""
+	nparams 4
+	  param inout name "self" explicit_type ""
+	  param in name "_date" explicit_type ""
+	  param in name "_store" explicit_type ""
+	  param in name "_warranty" explicit_type ""
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, _date, _store, _warranty${)}:
+${docstring}self.date = _date
+self.store = _store
+self.warranty = _warranty
+"
+	
+      end
+    end
+
+    class 128609 "Coordinate"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 137697 "address"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	get_oper operation_ref 137185 // getAddress
+	set_oper operation_ref 137313 // setAddress
+      end
+
+      attribute 137825 "workPhone"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	get_oper operation_ref 137441 // getWorkPhone
+	set_oper operation_ref 137569 // setWorkPhone
+      end
+
+      attribute 137953 "cellPhone"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	get_oper operation_ref 137697 // getCellPhone
+	set_oper operation_ref 137825 // setCellPhone
+      end
+
+      operation 137185 "getAddress"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.address
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 137697 // address
+      end
+
+      operation 137313 "setAddress"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	
+	java_name_spec "set${Name}"
+	
+	php_name_spec "set${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self, ${p0}${)}:
+${docstring}self.address = ${p0}
+"
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 137697 // address
+      end
+
+      operation 137441 "getWorkPhone"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.workPhone
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 137825 // workPhone
+      end
+
+      operation 137569 "setWorkPhone"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	
+	java_name_spec "set${Name}"
+	
+	php_name_spec "set${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self, ${p0}${)}:
+${docstring}self.workPhone = ${p0}
+"
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 137825 // workPhone
+      end
+
+      operation 137697 "getCellPhone"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final 
+	java_name_spec "get${Name}"
+	php_final 
+	php_name_spec "get${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}return self.cellPhone
+"
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 137953 // cellPhone
+      end
+
+      operation 137825 "setCellPhone"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	
+	java_name_spec "set${Name}"
+	
+	php_name_spec "set${Name}"
+	python_def "${@}${static}${abstract}def ${name}${(}self, ${p0}${)}:
+${docstring}self.cellPhone = ${p0}
+"
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 137953 // cellPhone
+      end
+
+      operation 181345 "prettyPrint"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}self${)}:
+${docstring}print \"*** Coordinate ***\"
+print \"Address:\",self.address
+print \"Work Phone:\",self.workPhone
+print \"Cell Phone:\",self.cellPhone
+"
+	
+      end
+    end
+
+    class 135137 "Main"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "import Employee
+import Location
+import Equipment
+import Purchase
+import Coordinate
+import time
+
+class ${name}${inherit}:
+${docstring}${members}
+main()
+	
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      operation 194529 "main"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}employee = Employee.Employee(\"Steve Jobs\", 1)
+employee.setTitle(\"CEO\")
+location = Location.Location()
+purchase = Purchase.Purchase(time.time(), \"Walmart\", time.time())
+equipment = Equipment.Equipment(purchase, 1234, \"Computer\", \"FFD123\", \"1134D\")
+location.addEmployee(employee)
+employee.setLocation(location)
+location.addEquipment(equipment)
+equipment.setAssignee(employee)
+employee.addEquipment(equipment)
+coordinates = Coordinate.Coordinate()
+coordinates.setAddress(\"One Redmond Way, Redmond, WA\")
+coordinates.setCellPhone(\"(206) 246-1342\")
+coordinates.setWorkPhone(\"(425) 422-1356\")
+employee.setCoordinates(coordinates)
+equipment.setLocation(location)
+location.setMaintenanceEmployee(employee)
+employee.setSupervisor(employee)
+location.prettyPrint()"
+	
+      end
+    end
+  end
+
+  deploymentview 141153 "InventorySystem"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+    artifact 134625 "Employee"
+      stereotype "source"
+      python_src "${comment}
+${import}
+${definition}"
+      associated_classes
+	class_ref 128097 // Employee
+      end
+    end
+
+    artifact 141153 "Location"
+      stereotype "source"
+      python_src "${comment}
+${import}
+${definition}"
+      associated_classes
+	class_ref 128225 // Location
+      end
+    end
+
+    artifact 141281 "Equipment"
+      stereotype "source"
+      python_src "${comment}
+${import}
+${definition}"
+      associated_classes
+	class_ref 128353 // Equipment
+      end
+    end
+
+    artifact 141409 "Purchase"
+      stereotype "source"
+      python_src "${comment}
+${import}
+${definition}"
+      associated_classes
+	class_ref 128481 // Purchase
+      end
+    end
+
+    artifact 141537 "Coordinate"
+      stereotype "source"
+      python_src "${comment}
+${import}
+${definition}"
+      associated_classes
+	class_ref 128609 // Coordinate
+      end
+    end
+
+    artifact 148065 "Main"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      python_src "${comment}
+${import}
+${definition}"
+      associated_classes
+	class_ref 135137 // Main
+      end
+    end
+  end
+end
