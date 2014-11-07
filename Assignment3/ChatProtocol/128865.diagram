@@ -1,0 +1,49 @@
+format 71
+
+classinstance 128097 class_ref 128353 // Manager
+  name ""   xyz 24 5 2000 life_line_z 2000
+classinstance 128225 class_ref 128481 // Chatroom
+  name ""   xyz 259 4 2000 life_line_z 2000
+classinstance 128481 class_ref 128097 // Client
+  name "client"   xyz 337 4 2000 life_line_z 2000
+textcanvas 129889 "[id != senderID]"
+  xyzwh 70 192 2020 96 21
+fragment 130401 "loop"
+  xyzwh 6 162 2000 382 90
+end
+textcanvas 130529 "[ for Client client in connections[roomId] ]"
+  xyzwh 68 167 2015 220 15
+durationcanvas 128609 classinstance_ref 128097 // :Manager
+  xyzwh 51 62 2010 11 40
+end
+durationcanvas 128737 classinstance_ref 128225 // :Chatroom
+  xyzwh 288 62 2010 11 25
+end
+durationcanvas 128993 classinstance_ref 128225 // :Chatroom
+  xyzwh 288 121 2010 11 40
+end
+durationcanvas 129121 classinstance_ref 128097 // :Manager
+  xyzwh 51 122 2010 11 96
+end
+durationcanvas 130017 classinstance_ref 128481 // client:Client
+  xyzwh 368 206 2010 11 28
+end
+msg 128865 asynchronous
+  from durationcanvas_ref 128609
+  to durationcanvas_ref 128737
+  yz 62 2015 msg operation_ref 129505 // "sendMessage(in senderID : int, in message : string)"
+  show_full_operations_definition default drawing_language default
+  label_xy 122 50
+msg 129249 asynchronous
+  from durationcanvas_ref 128993
+  to durationcanvas_ref 129121
+  yz 122 2015 msg operation_ref 129249 // "broadcast(in roomID : int, in senderID : int, in message : string)"
+  show_full_operations_definition default drawing_language default
+  label_xy 140 110
+msg 130145 asynchronous
+  from durationcanvas_ref 129121
+  to durationcanvas_ref 130017
+  yz 207 3005 msg operation_ref 128609 // "broadcast(in message : string) : void"
+  show_full_operations_definition default drawing_language default
+  label_xy 159 193
+end

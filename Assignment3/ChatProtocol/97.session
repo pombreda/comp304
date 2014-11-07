@@ -1,0 +1,12 @@
+window_sizes 1350 787 337 1007 594 136
+diagrams
+  active  sequencediagram_ref 128993 // UseCase7
+    805 475 100 4 16 0
+end
+show_stereotypes
+selected classrelation_ref 129377 // clientMap (<aggregation>)
+open
+  class_ref 128097 // Client
+  class_ref 128353 // Manager
+end
+end

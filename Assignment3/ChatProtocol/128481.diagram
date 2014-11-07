@@ -1,0 +1,42 @@
+format 71
+
+classinstance 128097 class_ref 128481 // Chatroom
+  name ""   xyz 15 4 2000 life_line_z 2000
+classinstance 128225 class_ref 128353 // Manager
+  name ""   xyz 221 4 2000 life_line_z 2000
+classinstance 128353 class_ref 128097 // Client
+  name ""   xyz 423 4 2000 life_line_z 2000
+durationcanvas 128481 classinstance_ref 128097 // :Chatroom
+  xyzwh 44 58 2010 11 40
+end
+durationcanvas 128609 classinstance_ref 128225 // :Manager
+  xyzwh 248 58 2010 11 25
+end
+durationcanvas 128865 classinstance_ref 128225 // :Manager
+  xyzwh 248 93 2010 11 41
+end
+durationcanvas 128993 classinstance_ref 128353 // :Client
+  xyzwh 442 93 2010 11 42
+  overlappingdurationcanvas 129249
+    xyzwh 448 104 2020 11 25
+  end
+end
+msg 128737 asynchronous
+  from durationcanvas_ref 128481
+  to durationcanvas_ref 128609
+  yz 58 2015 msg operation_ref 128865 // "accept(in roomID : int, in clientID : int)"
+  show_full_operations_definition default drawing_language default
+  label_xy 128 44
+msg 129121 asynchronous
+  from durationcanvas_ref 128865
+  to durationcanvas_ref 128993
+  yz 93 2015 msg operation_ref 128353 // "accept() : void"
+  show_full_operations_definition default drawing_language default
+  label_xy 327 79
+reflexivemsg 129377 synchronous
+  to durationcanvas_ref 129249
+  yz 104 2025 explicitmsg "print"
+  show_full_operations_definition default drawing_language default
+  args "roomID"
+  label_xy 457 90
+end

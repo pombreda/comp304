@@ -1,0 +1,57 @@
+format 71
+
+classinstance 128097 class_ref 128097 // Client
+  name "sender"   xyz 468 4 2000 life_line_z 2000
+classinstance 128225 class_ref 128097 // Client
+  name "client"   xyz 558 4 2000 life_line_z 2000
+classinstance 128353 class_ref 128353 // Manager
+  name ""   xyz 245 4 2000 life_line_z 2000
+classinstance 128481 class_ref 128481 // Chatroom
+  name ""   xyz 350 4 2000 life_line_z 2000
+fragment 129633 "loop"
+  xyzwh 8 110 2000 680 289
+end
+textcanvas 129761 "[ for Client client in connections[roomID] ]"
+  xyzwh 13 142 2005 300 22
+fragment 129889 "opt"
+  xyzwh 102 165 2000 568 189
+end
+textcanvas 130657 "[ clientID == senderID ]"
+  xyzwh 105 190 2005 131 14
+textcanvas 130785 "[ else ]"
+  xyzwh 109 268 2008 37 14
+durationcanvas 128609 classinstance_ref 128097 // sender:Client
+  xyzwh 504 54 2010 11 40
+end
+durationcanvas 128737 classinstance_ref 128481 // :Chatroom
+  xyzwh 379 57 2010 11 40
+end
+durationcanvas 129377 classinstance_ref 128353 // :Manager
+  xyzwh 272 81 2010 11 243
+end
+durationcanvas 130017 classinstance_ref 128225 // client:Client
+  xyzwh 589 300 2010 11 25
+end
+msg 128865 asynchronous
+  from durationcanvas_ref 128609
+  to durationcanvas_ref 128737
+  yz 57 2015 msg operation_ref 129505 // "sendMessage(in senderID : int, in message : string)"
+  show_full_operations_definition default drawing_language default
+  label_xy 398 43
+msg 129505 asynchronous
+  from durationcanvas_ref 128737
+  to durationcanvas_ref 129377
+  yz 84 2020 msg operation_ref 129249 // "broadcast(in roomID : int, in senderID : int, in message : string)"
+  show_full_operations_definition default drawing_language default
+  label_xy 296 70
+msg 130145 asynchronous
+  from durationcanvas_ref 129377
+  to durationcanvas_ref 130017
+  yz 300 2015 msg operation_ref 128609 // "broadcast(in message : string) : void"
+  show_full_operations_definition default drawing_language default
+  label_xy 404 286
+line 130273 -_-_ decenter_begin 46
+  from ref 129889 z 2001 to point 666 258
+  line 130401 z 2001 to point 99 258
+  line 130529 z 2001 to ref 129889
+end
