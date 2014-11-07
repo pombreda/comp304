@@ -1,0 +1,5 @@
+class SudokuCommand
+!!!129121.python!!!	do(in self : )
+self.board.setCell(self.position, self.newValue)
+!!!129249.python!!!	undo(in self : )
+self.board.setCell(self.position, self.oldValue)

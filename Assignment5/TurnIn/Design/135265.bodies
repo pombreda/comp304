@@ -1,0 +1,7 @@
+class LoadCommand
+!!!147809.python!!!	undo(in self : )
+self.board.state = self.state
+self.board.notifyObservers()
+!!!148193.python!!!	__init__(inout self : , in board : )
+for val in board.state:
+	self.state[val] = board.state[val]

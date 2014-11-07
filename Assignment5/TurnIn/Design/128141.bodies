@@ -1,0 +1,41 @@
+class SudokuBoardState
+!!!146529.python!!!	__init__(inout self : )
+for row in range(9):
+	for col in range(9):
+		self.state[(row, col)] = 0
+self.generate()
+!!!128097.python!!!	addObserver(in self : , in observer : )
+self.observers.append(observer)
+!!!128225.python!!!	removeObserver(in self : , in observer : )
+self.observers.remove(observer)
+!!!128353.python!!!	notifyObservers(in self : )
+for o in self.observers:
+	o.boardStateChanged(self)
+!!!128481.python!!!	setCell(in self : , in position : , in value : )
+if value != None:
+	try:
+		if int(value) not in range(1,10):
+			value = None
+	except ValueError:
+		value = None
+
+self.state[position] = value
+self.notifyObservers()
+!!!128609.python!!!	getCell(in self : , in position : )
+return self.state[position]
+!!!128737.python!!!	accept(in self : , in visitor : )
+visitor.visitBoard(self)
+!!!146657.python!!!	generate(in self : )
+puzzle = self.makepuzzle(self.solution([None] * 81))
+self.setBoard(puzzle)
+!!!146913.python!!!	solvable(in self : )
+if self.checkpuzzle(self.toBoard()) == -1:
+	return False
+else:
+	return True
+!!!147041.python!!!	solve(in self : )
+    if(self.solvable() == False):
+      return False
+    state, answer = self.solveboard(self.toBoard())
+    self.setBoard(answer)
+    return True

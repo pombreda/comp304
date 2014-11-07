@@ -1,0 +1,8 @@
+class SudokuSaver
+!!!147297.python!!!	visitBoard(in self : , in board : )
+for value in board.state:
+	if board.state[value] == None:
+		self.file.write("0")
+	else:
+		self.file.write(str(board.state[value]))
+	self.file.write(" ")

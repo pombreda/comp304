@@ -1,0 +1,1744 @@
+format 71
+"Assignment 5"
+  revision 5
+  modified_by 97 "Chris"
+  python_root_dir "/Users/Chris/Documents/Comp304/Assignment5/"
+
+
+  
+  // class settings
+  default_attribute_visibility private default_relation_visibility private default_operation_visibility public
+  //class diagram settings
+  draw_all_relations yes hide_attributes no hide_operations no hide_getset_operations no show_members_full_definition no show_members_visibility no show_members_stereotype no show_members_multiplicity no show_members_initialization no show_attribute_modifiers no member_max_width 127 show_parameter_dir yes show_parameter_name yes package_name_in_tab no class_drawing_mode natural drawing_language uml show_context_mode no auto_label_position yes show_relation_modifiers no show_relation_visibility no show_infonote no shadow yes show_stereotype_properties no
+  //use case diagram settings
+  package_name_in_tab no show_context no auto_label_position yes draw_all_relations yes class_drawing_mode actor shadow yes show_stereotype_properties no
+  //sequence diagram settings
+  show_full_operations_definition no write_horizontally yes class_drawing_mode natural drawing_language uml draw_all_relations yes shadow yes show_stereotype_properties no
+  //collaboration diagram settings
+  show_full_operations_definition no show_hierarchical_rank no write_horizontally yes drawing_language uml package_name_in_tab no show_context no draw_all_relations yes shadow yes show_stereotype_properties no
+  //object diagram settings
+   write_horizontally yes package_name_in_tab no show_context no auto_label_position yes draw_all_relations yes shadow yes show_stereotype_properties no
+  //component diagram settings
+  package_name_in_tab no show_context no auto_label_position yes draw_all_relations yes shadow yes
+  draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no
+  //deployment diagram settings
+  package_name_in_tab no show_context no write_horizontally yes auto_label_position yes draw_all_relations yes shadow yes
+  draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no
+  //state diagram settings
+  package_name_in_tab no show_context no auto_label_position yes write_trans_label_horizontally yes show_trans_definition no draw_all_relations yes shadow yes
+  show_activities yes region_horizontally yes drawing_language uml show_stereotype_properties no
+  //activity diagram settings
+  package_name_in_tab no show_context no show_opaque_action_definition no auto_label_position yes write_flow_label_horizontally no draw_all_relations yes shadow yes
+  show_infonote yes drawing_language uml show_stereotype_properties no
+  
+  class_color yellow duration_color transparent continuation_color gray note_color blue fragment_color transparent subject_color transparent usecase_color yellow package_color transparent component_color green artifact_color green deploymentnode_color gray state_color yellow stateaction_color transparent activity_color transparent activityregion_color transparent activitypartition_color transparent activityaction_color transparent parameterpin_color white 
+  font_size 9
+  diagram_format A4
+
+  mark_for_import
+  
+  classview 128013 "cview"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    associated_deployment_view deploymentview_ref 128013 // dview
+    classdiagram 128013 "class_diag"
+      draw_all_relations no hide_attributes no hide_operations no hide_getset_operations default show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_multiplicity yes show_members_initialization yes show_attribute_modifiers yes member_max_width 0 show_parameter_dir yes show_parameter_name yes package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    sequencediagram 128141 "Command_Seq"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default
+      overlapping_bars size A4
+    end
+
+    sequencediagram 134881 "Visitor_Seq"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default
+      overlapping_bars size A4
+    end
+
+    sequencediagram 135009 "Observer_Seq"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default
+      overlapping_bars size A4
+    end
+
+    class 128013 "SudokuGUI"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "from Tkinter import *
+import tkFileDialog
+import tkMessageBox
+import tkFont
+
+from collections import deque
+
+from SudokuBoardState import SudokuBoardState
+from GridWindow import GridWindow
+from MainWindow import MainWindow
+from RowWindow import RowWindow
+from ColWindow import ColWindow
+from BlockWindow import BlockWindow
+from SudokuCommand import SudokuCommand
+from LoadCommand import LoadCommand
+from SudokuSaver import SudokuSaver
+
+class ${name}${inherit}:
+${docstring}${members}"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 128013 "master"
+	private explicit_type "Tk"
+	init_value "master"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      operation 132833 "__init__"
+	public explicit_return_type ""
+	nparams 2
+	  param inout name "self" explicit_type ""
+	  param in name "master" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 131041 "open_main_board"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "self" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 131169 "open_block_board"
+	public explicit_return_type ""
+	nparams 3
+	  param in name "self" explicit_type ""
+	  param in name "rowOffset" explicit_type "int"
+	  param in name "colOffset" explicit_type "int"
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 131297 "open_row_board"
+	public explicit_return_type ""
+	nparams 3
+	  param in name "self" explicit_type ""
+	  param in name "rowOffset" explicit_type "int"
+	  param in name "colOffset" explicit_type "int"
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 131425 "open_col_board"
+	public explicit_return_type ""
+	nparams 3
+	  param in name "self" explicit_type ""
+	  param in name "rowOffset" explicit_type "int"
+	  param in name "colOffset" explicit_type "int"
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 130401 "load"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "self" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 148065 "doLoad"
+	private explicit_return_type ""
+	nparams 2
+	  param in name "self" explicit_type ""
+	  param in name "fileName" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 130913 "saveAs"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "self" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 130785 "save"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "self" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 130529 "undo"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "self" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 130657 "undo_last_error"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "self" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 129165 "quit"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "self" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 129293 "onQuit"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "self" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 129633 "accept"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "self" explicit_type ""
+	  param in name "visitor" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 130273 "makePlay"
+	public explicit_return_type ""
+	nparams 3
+	  param in name "self" explicit_type ""
+	  param in name "location" explicit_type ""
+	  param in name "value" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 146401 "closeGridWindow"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "self" explicit_type ""
+	  param in name "window" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      classrelation 143841 // <dependency>
+	relation 143329 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 143841 // <dependency>
+	  b parent class_ref 128353 // SudokuVisitor
+      end
+
+      classrelation 144353 // board (<unidirectional association>)
+	relation 143841 --->
+	  a role_name "board" init_value "SudokuBoardState()" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 144353 // board (<unidirectional association>)
+	  b parent class_ref 128141 // SudokuBoardState
+      end
+
+      classrelation 144609 // plays (<directional aggregation>)
+	relation 144097 o-->
+	  a role_name "plays" init_value "[]" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 144609 // plays (<directional aggregation>)
+	  b parent class_ref 135137 // Command
+      end
+
+      classrelation 145121 // <dependency>
+	relation 144609 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 145121 // <dependency>
+	  b parent class_ref 128609 // SudokuCommand
+      end
+
+      classrelation 145249 // <dependency>
+	relation 144737 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 145249 // <dependency>
+	  b parent class_ref 135265 // LoadCommand
+      end
+
+      operation 154721 "doSave"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "self" explicit_type ""
+	  param in name "fileName" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}${)}:
+${docstring}${body}
+"
+	
+      end
+    end
+
+    class 128141 "SudokuBoardState"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "import random
+
+class ${name}${inherit}:
+${docstring}${members}
+
+def setBoard(self, board):
+
+	for pos in range(81):
+      if board[pos] != None:
+        board[pos] = int(board[pos]) + 1
+
+    for row in range(9):
+      for col in range(9):
+        self.setCell((row, col), board[9*row + col])
+
+def toBoard(self):
+    board = [None] * 81
+    for row in range(9):
+      for col in range(9):
+        board[9*row + col] = self.getCell((row, col))
+    for pos in range(81):
+      if board[pos] != None:
+        board[pos] = int(board[pos]) - 1
+    return board
+
+# Functions taken from http://davidbau.com/archives/2006/09/04/sudoku_generator.html (David Bau's Sudoku generator)
+
+def makepuzzle(self, board):
+  puzzle = []; deduced = [None] * 81
+  order = random.sample(xrange(81), 81)
+  for pos in order:
+    if deduced[pos] is None:
+      puzzle.append((pos, board[pos]))
+      deduced[pos] = board[pos]
+      self.deduce(deduced)
+  random.shuffle(puzzle)
+  for i in xrange(len(puzzle) - 1, -1, -1):
+    e = puzzle[i]; del puzzle[i]
+    rating = self.checkpuzzle(self.boardforentries(puzzle), board)
+    if rating == -1: puzzle.append(e)
+  return self.boardforentries(puzzle)
+
+def ratepuzzle(self, puzzle, samples):
+  total = 0
+  for i in xrange(samples):
+    state, answer = self.solveboard(puzzle)
+    if answer is None: return -1
+    total += len(state)
+  return float(total) / samples
+
+def checkpuzzle(self, puzzle, board = None):
+  state, answer = self.solveboard(puzzle)
+  if answer is None: return -1
+  if board is not None and not self.boardmatches(board, answer): return -1
+  difficulty = len(state)
+  state, second = self.solvenext(state)
+  if second is not None: return -1
+  return difficulty
+
+def solution(self, board):
+  return self.solveboard(board)[1]
+
+def solveboard(self, original):
+  board = list(original)
+  guesses = self.deduce(board)
+  if guesses is None: return ([], board)
+  track = [(guesses, 0, board)]
+  return self.solvenext(track)
+
+def solvenext(self, remembered):
+  while len(remembered) > 0:
+    guesses, c, board = remembered.pop()
+    if c >= len(guesses): continue
+    remembered.append((guesses, c + 1, board))
+    workspace = list(board)
+    pos, n = guesses[c]
+    workspace[pos] = n
+    guesses = self.deduce(workspace)
+    if guesses is None: return (remembered, workspace)
+    remembered.append((guesses, 0, workspace))
+  return ([], None)
+
+def deduce(self, board):
+  while True:
+    stuck, guess, count = True, None, 0
+    # fill in any spots determined by direct conflicts
+    allowed, needed = self.figurebits(board)
+    for pos in xrange(81):
+      if None == board[pos]:
+        numbers = self.listbits(allowed[pos])
+        if len(numbers) == 0: return []
+        elif len(numbers) == 1: board[pos] = numbers[0]; stuck = False
+        elif stuck:
+          guess, count = self.pickbetter(guess, count, [(pos, n) for n in numbers])
+    if not stuck: allowed, needed = self.figurebits(board)
+    # fill in any spots determined by elimination of other locations
+    for axis in xrange(3):
+      for x in xrange(9):
+        numbers = self.listbits(needed[axis * 9 + x])
+        for n in numbers:
+          bit = 1 << n
+          spots = []
+          for y in xrange(9):
+            pos = self.posfor(x, y, axis)
+            if allowed[pos] & bit: spots.append(pos)
+          if len(spots) == 0: return []
+          elif len(spots) == 1: board[spots[0]] = n; stuck = False
+          elif stuck:
+            guess, count = self.pickbetter(guess, count, [(pos, n) for pos in spots])
+    if stuck:
+      if guess is not None: random.shuffle(guess)
+      return guess
+
+def figurebits(self, board):
+  allowed, needed = [e is None and 511 or 0 for e in board], []
+  for axis in xrange(3):
+    for x in xrange(9):
+      bits = self.axismissing(board, x, axis)
+      needed.append(bits)
+      for y in xrange(9):
+        allowed[self.posfor(x, y, axis)] &= bits
+  return allowed, needed
+
+def posfor(self, x, y, axis = 0):
+  if axis == 0: return x * 9 + y
+  elif axis == 1: return y * 9 + x
+  else: return ((0,3,6,27,30,33,54,57,60)[x] + (0,1,2,9,10,11,18,19,20)[y])
+
+def axisfor(self, pos, axis):
+  if axis == 0: return pos / 9
+  elif axis == 1: return pos % 9
+  else: return (pos / 27) * 3 + (pos / 3) % 3
+
+def axismissing(self, board, x, axis):
+  bits = 0
+  for y in xrange(9):
+    e = board[self.posfor(x, y, axis)]
+    if e is not None: bits |= 1 << e
+  return 511 ^ bits
+  
+def listbits(self, bits):
+  return [y for y in xrange(9) if 0 != bits & 1 << y]
+
+def allowed(self, board, pos):
+  bits = 511
+  for axis in xrange(3):
+    x = self.axisfor(pos, axis)
+    bits &= self.axismissing(board, x, axis)
+  return bits
+
+def pickbetter(self, b, c, t):
+  if b is None or len(t) < len(b): return (t, 1)
+  if len(t) > len(b): return (b, c)
+  if random.randint(0, c) == 0: return (t, c + 1)
+  else: return (b, c + 1)
+
+def entriesforboard(self, board):
+  return [(pos, board[pos]) for pos in xrange(81) if board[pos] is not None]
+
+def boardforentries(self, entries):
+  board = [None] * 81
+  for pos, n in entries: board[pos] = n
+  return board
+
+def boardmatches(self, b1, b2):
+  for i in xrange(81):
+    if b1[i] != b2[i]: return False
+  return True
+
+def printcode(self, n):
+  if n is None: return '_'
+  return str(n + 1)
+
+def printboard(self, board):
+  out = \"\"
+  for row in xrange(9):
+    for col in xrange(9):
+      out += (\"\",\" \",\" \",\"  \",\" \",\" \",\"  \",\" \",\" \")[col]
+      out += self.printcode(board[posfor(row, col)])
+    out += ('\\n','\\n','\\n\\n','\\n','\\n','\\n\\n','\\n','\\n','\\n')[row]
+  return out
+
+def parseboard(self, str):
+  result = []
+  for w in str.split():
+    for x in w:
+      if x in '|-=+': continue
+      if x in '123456789': result.append(int(x) - 1)
+      else: result.append(None)
+      if len(result) == 81: return result
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 128141 "state"
+	private explicit_type "uint"
+	init_value "{}"
+	stereotype "map"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      operation 146529 "__init__"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "self" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 128097 "addObserver"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "self" explicit_type ""
+	  param in name "observer" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 128225 "removeObserver"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "self" explicit_type ""
+	  param in name "observer" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 128353 "notifyObservers"
+	private explicit_return_type ""
+	nparams 1
+	  param in name "self" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 128481 "setCell"
+	public explicit_return_type ""
+	nparams 3
+	  param in name "self" explicit_type ""
+	  param in name "position" explicit_type ""
+	  param in name "value" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 128609 "getCell"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "self" explicit_type ""
+	  param in name "position" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 128737 "accept"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "self" explicit_type ""
+	  param in name "visitor" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      classrelation 136161 // observers (<directional aggregation>)
+	relation 136033 o-->
+	  a role_name "observers" init_value "[]" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 136161 // observers (<directional aggregation>)
+	  b parent class_ref 128225 // BoardStateObserver
+      end
+
+      operation 146657 "generate"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "self" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 146913 "solvable"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "self" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 147041 "solve"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "self" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      classrelation 143713 // <dependency>
+	relation 143201 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 143713 // <dependency>
+	  b parent class_ref 128353 // SudokuVisitor
+      end
+    end
+
+    class 128397 "GridWindow"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "from Tkinter import *
+
+class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 128269 "rows"
+	private explicit_type "uint"
+	init_value "rows"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 128397 "cols"
+	private explicit_type "uint"
+	init_value "cols"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 128525 "rowHeight"
+	private explicit_type "uint"
+	init_value "rowHeight"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 128653 "colWidth"
+	private explicit_type "uint"
+	init_value "colWidth"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 128781 "squareColourInFocus"
+	private explicit_type "uint"
+	init_value "squareColourInFocus"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 128909 "squareColourOutFocus"
+	private explicit_type "uint"
+	init_value "squareColourOutFocus"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 129037 "dividerWidth"
+	private explicit_type "uint"
+	init_value "dividerWidth"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 129165 "master"
+	private explicit_type "Tk"
+	init_value "master"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 135905 "window"
+	private explicit_type ""
+	init_value "Toplevel(master) # create a separate window"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+self.window.title(\"(\" + str(rowOffset) + \",\" + str(colOffset) + \")\")
+
+# bind UI events to callback methods
+self.window.bind(\"<Button-1>\", self.onClick)
+self.window.bind(\"<Key>\", self.onKey)
+self.window.protocol(\"WM_DELETE_WINDOW\", self.onClose)"
+	idl_decl ""
+      end
+
+      attribute 136033 "canvas"
+	private explicit_type ""
+	init_value "Canvas(self.window, width=cols*self.colWidth+2, height=rows*self.rowHeight+2)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+self.canvas.pack()"
+	idl_decl ""
+	comment " the grid is drawn on a Tkinter Canvas"
+      end
+
+      attribute 129293 "rectangle"
+	private explicit_type "uint"
+	init_value "{}"
+	stereotype "map"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	comment " containers of the GridWindow elements"
+      end
+
+      attribute 129421 "text"
+	private explicit_type "uint"
+	init_value "{}"
+	stereotype "map"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 129549 "focus"
+	private explicit_type "uint"
+	stereotype "set"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	comment " The coordinate of the square that currently has focus
+ A square's coordinate is stored as a tuple (row, col),
+ where row and col are integers in the range 0 to 9"
+      end
+
+      attribute 129677 "clearkey"
+	private explicit_type "char"
+	init_value "[65, 22, 36]"
+	stereotype "set"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	comment " These are the keyboard keys that can be used to clear a
+ square. Right now, these are space, backspace and enter.
+ self.clearkey = [13, 8, 32]
+ Updated March 2009 based on
+  http://infohost.nmt.edu/tcc/help/pubs/tkinter/key-names.html 
+  and a simple experiment printing out event.keycode
+  keycode(SPACE)     = 65
+  keycode(BACKSPACE) = 22
+  keycode(ENTER)     = 36"
+      end
+
+      attribute 135777 "controller"
+	private explicit_type ""
+	init_value "controller"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      operation 139361 "__init__"
+	public explicit_return_type ""
+	nparams 12
+	  param inout name "self" explicit_type ""
+	  param in name "master" explicit_type ""
+	  param in name "controller" explicit_type ""
+	  param in name "rows" explicit_type ""
+	  param in name "cols" explicit_type ""
+	  param in name "rowOffset" explicit_type ""
+	    defaultvalue "0"
+	  param in name "colOffset" explicit_type ""
+	    defaultvalue "0"
+	  param in name "rowHeight" explicit_type ""
+	    defaultvalue "40"
+	  param in name "colWidth" explicit_type ""
+	    defaultvalue "40"
+	  param in name "squareColourInFocus" explicit_type ""
+	    defaultvalue "\"LightGray\""
+	  param in name "squareColourOutFocus" explicit_type ""
+	    defaultvalue "\"White\""
+	  param in name "dividerWidth" explicit_type ""
+	    defaultvalue "3"
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}, ${p3}${v3}, ${p4}${v4}, ${p5}${v5}, ${p6}${v6}, ${p7}${v7}, ${p8}${v8}, ${p9}${v9}, ${p10}${v10}, ${p11}${v11}${)}:
+${body}
+"
+	
+      end
+
+      operation 129421 "setNumber"
+	public explicit_return_type ""
+	nparams 3
+	  param in name "self" explicit_type ""
+	  param in name "location" explicit_type ""
+	  param in name "number" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}:
+${docstring}${body}
+"
+	
+	comment " Sets a number in the specified square "
+      end
+
+      operation 129549 "setColour"
+	public explicit_return_type ""
+	nparams 3
+	  param in name "self" explicit_type ""
+	  param in name "location" explicit_type ""
+	  param in name "colour" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}:
+${docstring}${body}
+"
+	
+	comment " Sets the colour of the specified square"
+      end
+
+      operation 129677 "onClick"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "self" explicit_type ""
+	  param in name "event" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}${)}:
+${docstring}${body}
+"
+	
+	comment " Called when a square is clicked on
+ Sets its background (fill) colour"
+      end
+
+      operation 129761 "onKey"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "self" explicit_type ""
+	  param in name "event" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}${)}:
+${docstring}${body}
+"
+	
+	comment " Called when a keyboard key is pressed
+ (when this Soduko window has the focus)"
+      end
+
+      operation 129933 "onClose"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "self" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+	comment " Called when a particular window is closed."
+      end
+
+      operation 131553 "boardStateChanged"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "self" explicit_type ""
+	  param in name "board" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      classrelation 136033 // <realization>
+	relation 135905 -_-|>
+	  a public
+	    python "${type}"
+	    classrelation_ref 136033 // <realization>
+	  b parent class_ref 128225 // BoardStateObserver
+      end
+    end
+
+    class 128525 "MainWindow"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128141 // <generalisation>
+	relation 128141 ---|>
+	  a public
+	    python "${type}"
+	    classrelation_ref 128141 // <generalisation>
+	  b parent class_ref 128397 // GridWindow
+      end
+
+      operation 139489 "__init__"
+	public explicit_return_type ""
+	nparams 3
+	  param inout name "self" explicit_type ""
+	  param in name "master" explicit_type ""
+	  param in name "controller" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}:
+${docstring}super(${class}, ${p0}).__init__(${p1}, ${p2}, 9, 9)
+${body}
+"
+	
+      end
+    end
+
+    class 128653 "RowWindow"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128269 // <generalisation>
+	relation 128269 ---|>
+	  a public
+	    python "${type}"
+	    classrelation_ref 128269 // <generalisation>
+	  b parent class_ref 128397 // GridWindow
+      end
+
+      operation 139617 "__init__"
+	public explicit_return_type ""
+	nparams 5
+	  param inout name "self" explicit_type ""
+	  param in name "master" explicit_type ""
+	  param in name "controller" explicit_type ""
+	  param in name "rowOffset" explicit_type ""
+	  param in name "colOffset" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}, ${p3}${v3}, ${p4}${v4}${)}:
+${docstring}super(${class}, ${p0}).__init__(${p1}, ${p2}, 1, 9, ${p3}, ${p4})
+${body}
+"
+	
+      end
+    end
+
+    class 128781 "ColWindow"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128397 // <generalisation>
+	relation 128397 ---|>
+	  a public
+	    python "${type}"
+	    classrelation_ref 128397 // <generalisation>
+	  b parent class_ref 128397 // GridWindow
+      end
+
+      operation 139745 "__init__"
+	public explicit_return_type ""
+	nparams 5
+	  param inout name "self" explicit_type ""
+	  param in name "master" explicit_type ""
+	  param in name "controller" explicit_type ""
+	  param in name "rowOffset" explicit_type ""
+	  param in name "colOffset" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}, ${p3}${v3}, ${p4}${v4}${)}:
+${docstring}super(${class}, ${p0}).__init__(${p1}, ${p2}, 9, 1, ${p3}, ${p4})
+${body}
+"
+	
+      end
+    end
+
+    class 128909 "BlockWindow"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128525 // <generalisation>
+	relation 128525 ---|>
+	  a public
+	    python "${type}"
+	    classrelation_ref 128525 // <generalisation>
+	  b parent class_ref 128397 // GridWindow
+      end
+
+      operation 139873 "__init__"
+	public explicit_return_type ""
+	nparams 5
+	  param inout name "self" explicit_type ""
+	  param in name "master" explicit_type ""
+	  param in name "controller" explicit_type ""
+	  param in name "rowOffset" explicit_type ""
+	  param in name "colOffset" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}, ${p3}${v3}, ${p4}${v4}${)}:
+${docstring}super(${class}, ${p0}).__init__(${p1}, ${p2}, 3, 3, ${p3}, ${p4})
+${body}
+"
+	
+      end
+    end
+
+    class 128225 "BoardStateObserver"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      operation 129505 "boardStateChanged"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "self" explicit_type ""
+	  param in name "board" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}${)}:
+${docstring}${body}
+"
+	
+      end
+    end
+
+    class 128353 "SudokuVisitor"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      operation 128865 "visitBoard"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "self" explicit_type ""
+	  param in name "board" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}${)}:
+${docstring}${body}
+"
+	
+      end
+    end
+
+    class 128481 "SudokuSaver"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 142561 "file"
+	private explicit_type ""
+	init_value "file"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      operation 147169 "__init__"
+	public explicit_return_type ""
+	nparams 2
+	  param inout name "self" explicit_type ""
+	  param in name "file" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}${)}:
+${docstring}super(${class}, ${p0}).__init__()
+${body}
+"
+	
+      end
+
+      classrelation 128481 // <realization>
+	relation 128353 -_-|>
+	  a public
+	    python "${type}"
+	    classrelation_ref 128481 // <realization>
+	  b parent class_ref 128353 // SudokuVisitor
+      end
+
+      operation 147297 "visitBoard"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "self" explicit_type ""
+	  param in name "board" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}${)}:
+${docstring}${body}
+"
+	
+      end
+    end
+
+    class 128609 "SudokuCommand"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 128865 "position"
+	private explicit_type ""
+	init_value "position"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 128993 "oldValue"
+	private explicit_type ""
+	init_value "oldValue"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 129121 "newValue"
+	private explicit_type ""
+	init_value "newValue"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 129249 "solvable"
+	private explicit_type ""
+	init_value "False"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      operation 132705 "__init__"
+	public explicit_return_type ""
+	nparams 5
+	  param inout name "self" explicit_type ""
+	  param in name "board" explicit_type ""
+	  param in name "position" explicit_type ""
+	  param in name "oldValue" explicit_type ""
+	  param in name "newValue" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}, ${p3}${v3}, ${p4}${v4}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 129121 "do"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "self" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 129249 "undo"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "self" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      classrelation 144225 // board (<unidirectional association>)
+	relation 143713 --->
+	  a role_name "board" init_value "board" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 144225 // board (<unidirectional association>)
+	  b parent class_ref 128141 // SudokuBoardState
+      end
+
+      classrelation 144481 // <realization>
+	relation 143969 -_-|>
+	  a public
+	    python "${type}"
+	    classrelation_ref 144481 // <realization>
+	  b parent class_ref 135137 // Command
+      end
+    end
+
+    class 135137 "Command"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      operation 147553 "do"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "self" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 147681 "undo"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "self" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+      end
+    end
+
+    class 135265 "LoadCommand"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 144737 // <realization>
+	relation 144225 -_-|>
+	  a public
+	    python "${type}"
+	    classrelation_ref 144737 // <realization>
+	  b parent class_ref 135137 // Command
+      end
+
+      attribute 142689 "state"
+	private explicit_type ""
+	init_value "{}"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 144865 // board (<unidirectional association>)
+	relation 144353 --->
+	  a role_name "board" init_value "board" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 144865 // board (<unidirectional association>)
+	  b parent class_ref 128141 // SudokuBoardState
+      end
+
+      operation 147809 "undo"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "self" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 147937 "do"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "self" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 148193 "__init__"
+	public explicit_return_type ""
+	nparams 2
+	  param inout name "self" explicit_type ""
+	  param in name "board" explicit_type ""
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}${)}:
+${docstring}super(${class}, ${p0}).__init__()
+${body}
+"
+	
+      end
+    end
+
+    classdiagram 128097 "Command"
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    classdiagram 128225 "Visitor"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    classdiagram 128353 "Observer"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+  end
+
+  deploymentview 128013 "dview"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+    artifact 128013 "SudokuGUI"
+      stereotype "source"
+      python_src "${comment}
+${import}
+${definition}
+
+if __name__ == '__main__':
+    root = Tk()
+    sudokuGui = SudokuGUI(root)
+    
+    root.title('Ultimate Sudoku')
+    root.mainloop()  "
+      associated_classes
+	class_ref 128013 // SudokuGUI
+      end
+    end
+
+    artifact 128397 "GridWindow"
+      stereotype "source"
+      python_src "${comment}
+${import}
+${definition}"
+      associated_classes
+	class_ref 128397 // GridWindow
+      end
+    end
+
+    artifact 128525 "MainWindow"
+      stereotype "source"
+      python_src "${comment}
+${import}
+${definition}"
+      associated_classes
+	class_ref 128525 // MainWindow
+      end
+    end
+
+    artifact 128781 "ColWindow"
+      stereotype "source"
+      python_src "${comment}
+${import}
+${definition}"
+      associated_classes
+	class_ref 128781 // ColWindow
+      end
+    end
+
+    artifact 128909 "BlockWindow"
+      stereotype "source"
+      python_src "${comment}
+${import}
+${definition}"
+      associated_classes
+	class_ref 128909 // BlockWindow
+      end
+    end
+
+    artifact 128225 "BoardStateObserver"
+      stereotype "source"
+      python_src "${comment}
+${import}
+${definition}"
+      associated_classes
+	class_ref 128225 // BoardStateObserver
+      end
+    end
+
+    artifact 128353 "SudokuVisitor"
+      stereotype "source"
+      python_src "${comment}
+${import}
+${definition}"
+      associated_classes
+	class_ref 128353 // SudokuVisitor
+      end
+    end
+
+    artifact 128481 "SudokuSaver"
+      stereotype "source"
+      python_src "${comment}
+${import}
+${definition}"
+      associated_classes
+	class_ref 128481 // SudokuSaver
+      end
+    end
+
+    artifact 128609 "SudokuCommand"
+      stereotype "source"
+      python_src "${comment}
+${import}
+${definition}"
+      associated_classes
+	class_ref 128609 // SudokuCommand
+      end
+    end
+
+    artifact 135777 "RowWindow"
+      stereotype "source"
+      python_src "${comment}
+${import}
+${definition}"
+      associated_classes
+	class_ref 128653 // RowWindow
+      end
+    end
+
+    artifact 135905 "SudokuBoardState"
+      stereotype "source"
+      python_src "${comment}
+${import}
+${definition}"
+      associated_classes
+	class_ref 128141 // SudokuBoardState
+      end
+    end
+
+    artifact 136033 "Command"
+      stereotype "source"
+      python_src "${comment}
+${import}
+${definition}"
+      associated_classes
+	class_ref 135137 // Command
+      end
+    end
+
+    artifact 136161 "LoadCommand"
+      stereotype "source"
+      python_src "${comment}
+${import}
+${definition}"
+      associated_classes
+	class_ref 135265 // LoadCommand
+      end
+    end
+  end
+end

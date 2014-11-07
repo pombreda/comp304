@@ -1,0 +1,44 @@
+class GridWindow
+!!!139361.python!!!	__init__(inout self : , in master : , in controller : , in rows : , in cols : , in rowOffset :  = 0, in colOffset :  = 0, in rowHeight :  = 40, in colWidth :  = 40, in squareColourInFocus :  = "LightGray", in squareColourOutFocus :  = "White", in dividerWidth :  = 3)
+for row in range(0, self.rows):
+	for col in range(0, self.cols):
+		self.rectangle[(row, col)] = \
+		self.canvas.create_rectangle(2+colWidth*col, 2+rowHeight*row, 2+colWidth*(col+1), 2+rowHeight*(row+1), fill="White")   
+		self.text[(row, col)] = \
+		self.canvas.create_text(2+colWidth*(col+0.5), 2+rowHeight*(row+0.5), text=str(""))
+		# show coordinates in cells
+		# note how on a Tkinter Canvas, (x,y) coordinate (0,0) is the top left corner
+!!!129421.python!!!	setNumber(in self : , in location : , in number : )
+itemId = self.text[location]
+if number == None:
+	number = ""
+self.canvas.itemconfigure(itemId, text=number)
+!!!129549.python!!!	setColour(in self : , in location : , in colour : )
+itemId = self.rectangle[location]
+self.canvas.itemconfigure(itemId, fill=colour)
+!!!129677.python!!!	onClick(in self : , in event : )
+row = (event.y - 2) / self.rowHeight 
+col = (event.x - 2) / self.colWidth
+                
+if row >= 0 and row < self.rows and col >= 0 and col < self.cols:
+	if (self.focus != None):
+		self.setColour(self.focus, self.squareColourOutFocus)                
+	self.focus = (row, col)
+	self.setColour(self.focus, self.squareColourInFocus)
+!!!129761.python!!!	onKey(in self : , in event : )
+if self.focus != None:
+	if "123456789".find(event.char) != -1:
+		newValue = event.char
+	elif event.keycode in self.clearkey:
+		newValue = ""
+	else:
+		return
+
+	self.controller.makePlay(self.focus, newValue)
+!!!129933.python!!!	onClose(in self : )
+self.controller.closeGridWindow(self)
+self.window.destroy()
+!!!131553.python!!!	boardStateChanged(in self : , in board : )
+for i in range(0, self.rows):
+	for j in range(0, self.cols):
+		self.setNumber((i, j), board.getCell((i, j)))

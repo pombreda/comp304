@@ -1,0 +1,24 @@
+window_sizes 1359 789 337 1012 664 69
+motifplus_style
+diagrams
+  classdiagram_ref 128097 // Command
+    809 531 100 4 0 0
+  classdiagram_ref 128225 // Visitor
+    809 531 100 4 0 0
+  active  classdiagram_ref 128353 // Observer
+    809 531 100 4 0 0
+end
+show_stereotypes
+selected class_ref 135265 // LoadCommand
+open
+  classrelation_ref 145249 // <dependency>
+  class_ref 128397 // GridWindow
+  class_ref 128525 // MainWindow
+  class_ref 128653 // RowWindow
+  class_ref 128781 // ColWindow
+  class_ref 128909 // BlockWindow
+  class_ref 135137 // Command
+  class_ref 135265 // LoadCommand
+  deploymentview_ref 128013 // dview
+end
+end

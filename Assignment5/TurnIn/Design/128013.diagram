@@ -1,0 +1,16 @@
+format 71
+
+classcanvas 128013 class_ref 128013 // SudokuGUI
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 280 11 2000
+end
+classcanvas 128141 class_ref 128141 // SudokuBoardState
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyzwh 4 3 2000 197 127
+end
+relationcanvas 128097 relation_ref 142817 // <directional aggregation>
+  from ref 128013 z 2001 to ref 128141
+  role_a_pos 210 70 3000 no_role_b
+  multiplicity_a_pos 210 89 3000 multiplicity_b_pos 264 104 3000
+end
+end

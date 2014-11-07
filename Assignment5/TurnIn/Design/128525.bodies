@@ -1,0 +1,7 @@
+class MainWindow
+!!!139489.python!!!	__init__(inout self : , in master : , in controller : )
+for i in range(0,2):
+	# thick vertical dividing line every three squares
+	self.canvas.create_line(2+3*self.colWidth*(i+1), 2, 2+3*self.colWidth*(i+1), 2+9*self.rowHeight, width=self.dividerWidth)  
+	# thick horizontal dividing line every three squares
+	self.canvas.create_line(2, 2+3*self.rowHeight*(i+1), 2+9*self.colWidth, 2+3*self.rowHeight*(i+1), width=self.dividerWidth)
